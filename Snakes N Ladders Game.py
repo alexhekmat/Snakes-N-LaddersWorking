@@ -2,7 +2,7 @@ import pygame
 from random import randint
 import time
 
-
+##1
 
 
 clock=pygame.time.Clock()
