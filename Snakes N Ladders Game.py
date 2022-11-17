@@ -2,12 +2,9 @@ import pygame
 from random import randint
 import time
 
-##1
-
 
 clock=pygame.time.Clock()
 
-#Initialize
 pygame.init()
 w=1366
 h=768
@@ -360,7 +357,7 @@ def options():
         b1=b2=b3=b4=b5=-1
         GD.blit(menubg,(0,0))
         #Single player button
-        b1=button("Single Player",mouse[0],mouse[1],(w/2-150),250,300,50,green,b_green,30,"s")
+        b1=button("1 Player",mouse[0],mouse[1],(w/2-150),250,300,50,green,b_green,30,"s")
         #2 player button
         b2=button("2 Players",mouse[0],mouse[1],(w/2)-150,350,300,50,green,b_green,30,2)
         #3 player
