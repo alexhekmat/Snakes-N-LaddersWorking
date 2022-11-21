@@ -14,7 +14,7 @@ GD=pygame.display.set_mode((w,h),pygame.FULLSCREEN)
 pygame.display.set_caption("Trouble")
 pygame.display.set_icon(icon)
 pygame.display.update()
-
+##test
 #Graphics:
 black=(10,10,10)
 white=(250,250,250)
