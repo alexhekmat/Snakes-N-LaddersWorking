@@ -3,21 +3,18 @@ from random import randint
 import time
 
 
-
-
 clock=pygame.time.Clock()
 
-#Initialize
 pygame.init()
 w=1366
 h=768
 
 icon=pygame.image.load("icon.jpg")
 GD=pygame.display.set_mode((w,h),pygame.FULLSCREEN)
-pygame.display.set_caption("Snakes N Ladders")
+pygame.display.set_caption("Trouble")
 pygame.display.set_icon(icon)
 pygame.display.update()
-
+##test
 #Graphics:
 black=(10,10,10)
 white=(250,250,250)
@@ -360,7 +357,7 @@ def options():
         b1=b2=b3=b4=b5=-1
         GD.blit(menubg,(0,0))
         #Single player button
-        b1=button("Single Player",mouse[0],mouse[1],(w/2-150),250,300,50,green,b_green,30,"s")
+        b1=button("1 Player",mouse[0],mouse[1],(w/2-150),250,300,50,green,b_green,30,"s")
         #2 player button
         b2=button("2 Players",mouse[0],mouse[1],(w/2)-150,350,300,50,green,b_green,30,2)
         #3 player
