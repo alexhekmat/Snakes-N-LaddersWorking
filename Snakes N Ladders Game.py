@@ -29,12 +29,12 @@ purple=(43,3,132)
 b_purple=(60,0,190)
 
 board= pygame.image.load("Snakes-and-Ladders-Bigger.jpg")
-dice1=pygame.image.load("Dice1.png")
-dice2=pygame.image.load("Dice2.png")
-dice3=pygame.image.load("Dice3.png")
-dice4=pygame.image.load("Dice4.png")
-dice5=pygame.image.load("Dice5.png")
-dice6=pygame.image.load("Dice6.png")
+die1=pygame.image.load("Die1.png")
+die2=pygame.image.load("Die2.png")
+die3=pygame.image.load("Die3.png")
+die4=pygame.image.load("Die4.png")
+die5=pygame.image.load("Die5.png")
+die6=pygame.image.load("Die6.png")
 
 redgoti=pygame.image.load("redgoti.png")
 yellowgoti=pygame.image.load("yellowgoti.png")
@@ -124,17 +124,17 @@ def snakes(x):
 
 def dice(a):
     if a==1:
-        a=dice1
+        a=die1
     elif a==2:
-        a=dice2
+        a=die2
     elif a==3:
-        a=dice3
+        a=die3
     elif a==4:
-        a=dice4
+        a=die4
     elif a==5:
-        a=dice5
+        a=die5
     elif a==6:
-        a=dice6
+        a=die6
 
     time=pygame.time.get_ticks()
     while pygame.time.get_ticks()-time<1000:
