@@ -243,22 +243,6 @@ def intro():
                 return
         pygame.display.update()
 
-def credit():
-    while True:
-        GD.blit(credits1,(0,0))
-        for event in pygame.event.get():
-            if event.type== pygame.KEYDOWN:
-                if event.key== pygame.K_ESCAPE:
-                    Quit()
-        #mouse pos
-        mouse=pygame.mouse.get_pos()
-        click=pygame.mouse.get_pressed()
-        if button("Back",mouse[0],mouse[1],w/2-100,700,200,50,red,b_red,25,20):
-            main()
-            
-        pygame.display.update()
-        
-    
 
 
     
