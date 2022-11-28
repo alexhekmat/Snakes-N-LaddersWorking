@@ -156,16 +156,15 @@ def button1(text,xmouse,ymouse,x,y,w,h,i,a,fs):
     
 
 #Turn
-def turn(score,l,s):
-
+def turn(score):
     a=randint(1,6)#player dice roll
     if a==6:
         six=True
     else:
         six=False
     p=dice(a)
-    score+=a
-    return score,l,s,six
+    score += a
+    return score,six
 
 
 #Quitting:
@@ -379,7 +378,7 @@ def play(b):
             
             if button1("Player 1",mouse[0],mouse[1],100,700,200,50,red,grey,30):
                 if t==1:
-                    p1score,l,s,six=turn(p1score,l,s)
+                    p1score,six=turn(p1score)
                     if not six:
                         t+=1
                     xcr,ycr=goti(p1score)
@@ -394,7 +393,7 @@ def play(b):
             button1("Computer",mouse[0],mouse[1],400,700,200,50,yellow,grey,30)
             if True:
                 if t==2:
-                    p2score,l,s,six=turn(p2score,l,s)
+                    p2score,six=turn(p2score)
                     xcy,ycy=goti(p2score)
                     if not six:
                         t+=1
@@ -411,7 +410,7 @@ def play(b):
         if 5>b>1:
             if button1("Player 1",mouse[0],mouse[1],100,700,200,50,red,grey,30):
                 if t==1:
-                    p1score,l,s,six=turn(p1score,l,s)
+                    p1score,six=turn(p1score)
                     xcr,ycr=goti(p1score)
                     if not six:
                         t+=1
@@ -425,7 +424,7 @@ def play(b):
                 
             if button1("Player 2",mouse[0],mouse[1],400,700,200,50,yellow,grey,30):
                 if t==2:
-                    p2score,l,s,six=turn(p2score,l,s)
+                    p2score,six=turn(p2score)
                     xcy,ycy=goti(p2score)
                     if not six:
                         t+=1
@@ -443,7 +442,7 @@ def play(b):
         if 5>b>2:
             if button1("Player 3",mouse[0],mouse[1],700,700,200,50,green,grey,30):
                 if t==3:
-                    p3score,l,s,six=turn(p3score,l,s)
+                    p3score,six=turn(p3score)
                     xcg,ycg=goti(p3score)
                     if not six:
                         t+=1
@@ -461,7 +460,7 @@ def play(b):
         if 5>b>3:   
             if button1("Player 4",mouse[0],mouse[1],1000,700,200,50,blue,grey,30):
                 if t==4:
-                    p4score,l,s,six=turn(p4score,l,s)
+                    p4score,six=turn(p4score)
                     xcb,ycb=goti(p4score)
                     if not six:
                         t+=1
@@ -489,17 +488,6 @@ def play(b):
              
         if 5>b>3:
             GD.blit(bluegoti,(xcb+6,ycb))
-            
-        if l:
-            time=pygame.time.get_ticks()
-            while pygame.time.get_ticks()-time<2000:
-                message_display1("There's a Ladder!",650,50,35,black)
-                pygame.display.update()
-        if s:
-            time=pygame.time.get_ticks()
-            while pygame.time.get_ticks()-time<2000:
-                message_display1("There's a Snake!",650,50,35,black)
-                pygame.display.update()
 
         clock.tick(7)
         pygame.display.update()
