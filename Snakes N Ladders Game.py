@@ -98,29 +98,7 @@ def text_objects1(text, font):
     textSurface = font.render(text, True,black)
     return textSurface, textSurface.get_rect()
 
-#Ladder check
-def ladders(x):
-    if x==1: return 38
-    elif x==4:return 14
-    elif x==9:return 31
-    elif x==28:return 84
-    elif x==21:return 42
-    elif x==51:return 67
-    elif x==80:return 99
-    elif x==72:return 91
-    else:return x
 
-#Snake Check
-def snakes(x): 
-    if x==17:return 7
-    elif x==54:return 34
-    elif x==62:return 19
-    elif x==64:return 60
-    elif x==87:return 36
-    elif x==93:return 73
-    elif x==95: return 75
-    elif x==98: return 79
-    else:return x
 
 def dice(a):
     if a==1:
@@ -138,7 +116,7 @@ def dice(a):
 
     time=pygame.time.get_ticks()
     while pygame.time.get_ticks()-time<1000:
-        GD.blit(a,(300,500))
+        GD.blit(a,(500,500))
         pygame.display.update()    
 
 #for mute and unmute    
@@ -179,7 +157,7 @@ def button1(text,xmouse,ymouse,x,y,w,h,i,a,fs):
 
 #Turn
 def turn(score,l,s):
-    
+
     a=randint(1,6)#player dice roll
     if a==6:
         six=True
@@ -187,27 +165,8 @@ def turn(score,l,s):
         six=False
     p=dice(a)
     score+=a
-    if score<=100:
-        lad=ladders(score) #checking for ladders for player
-        if lad!=score:
-            l=True
-            pygame.mixer.Sound.play(ladder)
-            time=pygame.time.get_ticks()
-            score=lad 
-        snk=snakes(score)
-        if snk!=score: #checking for snakes for player
-            s=True
-            pygame.mixer.Sound.play(snakesound)
-            score=snk
-           
-    else: #checks if player score is not grater than 100
-        score-=a
-        time=pygame.time.get_ticks()
-        while pygame.time.get_ticks()-time<1500:
-            message_display1("Can't move!",650,50,35,black)
-            pygame.display.update()
     return score,l,s,six
-    
+
 
 #Quitting:
 def Quit():
