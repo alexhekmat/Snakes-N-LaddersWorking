@@ -116,7 +116,7 @@ def dice(a):
 
     time=pygame.time.get_ticks()
     while pygame.time.get_ticks()-time<1000:
-        GD.blit(a,(500,500))
+        GD.blit(a,(425,100))
         pygame.display.update()    
 
 #for mute and unmute    
@@ -250,7 +250,6 @@ def intro():
 def main():
         
     pygame.mixer.music.play(-1)
-
     
     menu=True
     while menu:
