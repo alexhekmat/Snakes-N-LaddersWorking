@@ -37,6 +37,7 @@ die5=pygame.image.load("Die5.png")
 die6=pygame.image.load("Die6.png")
 
 redgoti=pygame.image.load("redgoti.png")
+redgoti2=pygame.image.load("redgoti.png")
 yellowgoti=pygame.image.load("yellowgoti.png")
 greengoti=pygame.image.load("greengoti.png")
 bluegoti=pygame.image.load("bluegoti.png")
@@ -321,8 +322,6 @@ def options():
         pygame.display.update()
 
 def play(b):
-
-    
     b6=-1
     time=3000
     if b6==7:
@@ -333,14 +332,15 @@ def play(b):
     xcy = 537
     xcg = 457
     xcb = 904
-    ycr = 606
+    ycr = 60
     ycy = 163
     ycg = 526
     ycb = 242
+    xcr1 = 830
+    ycr1 = 550
 
-
-    GD.blit(redgoti,(xcy,ycy))
-
+    GD.blit(redgoti,(xcr,ycr))
+    GD.blit(redgoti2, (xcr1, ycr1))
     if 5>b>1 or b==21:
         GD.blit(yellowgoti,(xcy,ycy))
     if 5>b>2 or b==21:
@@ -386,9 +386,11 @@ def play(b):
             if button1("Player 1",mouse[0],mouse[1],100,700,200,50,red,grey,30):
                 if t==1:
                     p1score,six=turn(p1score)
+                    p11score, six = turn(p1score)
                     if not six:
                         t+=1
                     xcr,ycr=goti(p1score)
+                    xcr1,ycr1=goti(p11score)
                     if p1score==100:
                         time=pygame.time.get_ticks()
                         while pygame.time.get_ticks()-time<2000:
