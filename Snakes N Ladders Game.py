@@ -329,15 +329,22 @@ def play(b):
         options()
     GD.blit(p,(0,0))
     GD.blit(board,(w/2-250,h/2-250))
-    xcr=xcy=xcg=xcb=406-25
-    ycr=ycy=ycg=ycb=606-25
+    xcr = 826
+    xcy = 537
+    xcg = 457
+    xcb = 904
+    ycr = 606
+    ycy = 163
+    ycg = 526
+    ycb = 242
+
+
     GD.blit(redgoti,(xcy,ycy))
+
     if 5>b>1 or b==21:
         GD.blit(yellowgoti,(xcy,ycy))
-            
     if 5>b>2 or b==21:
         GD.blit(greengoti,(xcg,ycg))
-            
     if 5>b>2:
         GD.blit(bluegoti,(xcb,ycb))
     p1="Player 1"
