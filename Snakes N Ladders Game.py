@@ -90,7 +90,7 @@ def goti_red(a):
     l1 = [[812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470],
           [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152], [669, 152],
           [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468],
-          [853, 514]]
+          [853, 514], [815, 515], [789, 490], [763, 465], [737, 437]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -101,7 +101,7 @@ def goti_yellow(a):
     l1 = [[524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270],
           [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589],
           [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270],
-          [485, 227]]
+          [485, 227], [518, 223], [545, 250], [574, 276], [599, 303]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -112,7 +112,7 @@ def goti_green(a):
     l1 = [[484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161],
           [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318], [887, 370],
           [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580],
-          [525, 557]]
+          [525, 557], [517, 517], [544, 492], [569, 466], [597, 439]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -123,7 +123,7 @@ def goti_blue(a):
     l1 = [[853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580],
           [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422], [452, 371],
           [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160],
-          [812, 186]]
+          [812, 186], [809, 223], [784, 249], [756, 276], [730, 302]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -428,19 +428,22 @@ def play(b):
         GD.blit(bluegoti, (xcb2, ycb2))
         GD.blit(bluegoti, (xcb3, ycb3))
     p1 = "Player 1"
-    p1score = -1
+    p1score1 = -1
+    p1score2 = -1
+    p1score3 = -1
+    p1score4 = -1
     if b == 21:
         p2 = "Computer"
-        p2score = -1
+        p2score1 = -1
     if 5 > b > 1:
         p2 = "Player 2"
-        p2score = -1
+        p2score1 = -1
     if 5 > b > 2:
         p3 = "Player 3"
-        p3score = -1
+        p3score1 = -1
     if 5 > b > 3:
         p4 = "Player 4"
-        p4score = -1
+        p4score1 = -1
     t = 1
     play = True
     while True:
@@ -464,11 +467,11 @@ def play(b):
 
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
                 if t == 1:
-                    p1score, six = turn(p1score)
+                    p1score1, six = turn(p1score1)
                     if not six:
                         t += 1
-                    xcr, ycr = goti_red(p1score)
-                    if p1score == 100:
+                    xcr, ycr = goti_red(p1score1)
+                    if p1score1 == 100:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 1 Wins", 650, 50, 50, black)
@@ -479,14 +482,14 @@ def play(b):
             button1("Computer", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30)
             if True:
                 if t == 2:
-                    p2score, six = turn(p2score)
-                    xcy, ycy = goti_yellow(p2score)
+                    p2score1, six = turn(p2score1)
+                    xcy, ycy = goti_yellow(p2score1)
                     if not six:
                         t += 1
                         if b < 3 or b == 21:
                             t = 1
 
-                    if p2score == 100:
+                    if p2score1 == 100:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Computer Wins", 650, 50, 50, black)
@@ -496,11 +499,11 @@ def play(b):
         if 5 > b > 1:
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
                 if t == 1:
-                    p1score, six = turn(p1score)
-                    xcr, ycr = goti_red(p1score)
+                    p1score1, six = turn(p1score1)
+                    xcr, ycr = goti_red(p1score1)
                     if not six:
                         t += 1
-                    if p1score == 100:
+                    if p1score1 == 100:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 1 Wins", 650, 50, 50, black)
@@ -510,14 +513,14 @@ def play(b):
 
             if button1("Player 2", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30):
                 if t == 2:
-                    p2score, six = turn(p2score)
-                    xcy, ycy = goti_yellow(p2score)
+                    p2score1, six = turn(p2score1)
+                    xcy, ycy = goti_yellow(p2score1)
                     if not six:
                         t += 1
                         if b < 3:
                             t = 1
 
-                    if p2score == 100:
+                    if p2score1 == 100:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 2 Wins", 650, 50, 50, black)
@@ -528,14 +531,14 @@ def play(b):
         if 5 > b > 2:
             if button1("Player 3", mouse[0], mouse[1], 700, 700, 200, 50, green, grey, 30):
                 if t == 3:
-                    p3score, six = turn(p3score)
-                    xcg, ycg = goti_green(p3score)
+                    p3score1, six = turn(p3score1)
+                    xcg, ycg = goti_green(p3score1)
                     if not six:
                         t += 1
                         if b < 4:
                             t = 1
 
-                    if p3score == 100:
+                    if p3score1 == 100:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 3 Wins", 650, 50, 50, black)
@@ -546,14 +549,14 @@ def play(b):
         if 5 > b > 3:
             if button1("Player 4", mouse[0], mouse[1], 1000, 700, 200, 50, blue, grey, 30):
                 if t == 4:
-                    p4score, six = turn(p4score)
-                    xcb, ycb = goti_blue(p4score)
+                    p4score1, six = turn(p4score1)
+                    xcb, ycb = goti_blue(p4score1)
                     if not six:
                         t += 1
                         if b < 5:
                             t = 1
 
-                    if p4score == 100:
+                    if p4score1 == 100:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 4 Wins", 650, 50, 50, black)
