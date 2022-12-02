@@ -356,28 +356,77 @@ def play(b):
         options()
     GD.blit(p, (0, 0))
     GD.blit(board, (w / 2 - 250, h / 2 - 250))
+
+    ##Red Homes
     xcr = 814
-    xcy = 524
-    xcr1 = 820
-    ycr1 = 540
+    ycr = 594
+    xcr1 = 846
+    ycr1 = 573
+    xcr2 = 871
+    ycr2 = 546
+    xcr3 = 891
+    ycr3 = 513
+
+    ##Green Homes
 
     xcg = 445
-    xcb = 892
-    ycr = 594
-    ycy = 147
     ycg = 514
+    xcg1 = 462
+    ycg1 = 548
+    xcg2 = 487
+    ycg2 = 585
+    xcg3 = 520
+    ycg3 = 594
+
+    ##Yellow Homes
+
+    xcy = 524
+    ycy = 147
+    xcy1 = 490
+    ycy1 = 167
+    xcy2 = 463
+    ycy2 = 195
+    xcy3 = 444
+    ycy3 = 227
+
+
+    ##Blue homes
+
+    xcb = 892
     ycb = 226
+    xcb1 = 866
+    ycb1 = 193
+    xcb2 = 839
+    ycb2 = 166
+    xcb3 = 807
+    ycb3 = 148
+
+
+
+
+
 
 
 
     GD.blit(redgoti, (xcr, ycr))
     GD.blit(redgoti, (xcr1, ycr1))
+    GD.blit(redgoti, (xcr2, ycr2))
+    GD.blit(redgoti, (xcr3, ycr3))
     if 5 > b > 1 or b == 21:
         GD.blit(yellowgoti, (xcy, ycy))
+        GD.blit(yellowgoti, (xcy1, ycy1))
+        GD.blit(yellowgoti, (xcy2, ycy2))
+        GD.blit(yellowgoti, (xcy3, ycy3))
     if 5 > b > 2 or b == 21:
         GD.blit(greengoti, (xcg, ycg))
+        GD.blit(greengoti, (xcg1, ycg1))
+        GD.blit(greengoti, (xcg2, ycg2))
+        GD.blit(greengoti, (xcg3, ycg3))
     if 5 > b > 2:
         GD.blit(bluegoti, (xcb, ycb))
+        GD.blit(bluegoti, (xcb1, ycb1))
+        GD.blit(bluegoti, (xcb2, ycb2))
+        GD.blit(bluegoti, (xcb3, ycb3))
     p1 = "Player 1"
     p1score = -1
     if b == 21:
@@ -515,14 +564,25 @@ def play(b):
         b6 = button("Back", mouse[0], mouse[1], 0, 0, 200, 50, red, b_red, 30, 7)
         GD.blit(redgoti, (xcr, ycr))
         GD.blit(redgoti, (xcr1, ycr1))
+        GD.blit(redgoti, (xcr2, ycr2))
+        GD.blit(redgoti, (xcr3, ycr3))
         if 5 > b > 1 or b == 21:
             GD.blit(yellowgoti, (xcy, ycy))
+            GD.blit(yellowgoti, (xcy1, ycy1))
+            GD.blit(yellowgoti, (xcy2, ycy2))
+            GD.blit(yellowgoti, (xcy3, ycy3))
 
         if 5 > b > 2:
             GD.blit(greengoti, (xcg, ycg))
+            GD.blit(greengoti, (xcg1, ycg1))
+            GD.blit(greengoti, (xcg2, ycg2))
+            GD.blit(greengoti, (xcg3, ycg3))
 
         if 5 > b > 3:
             GD.blit(bluegoti, (xcb, ycb))
+            GD.blit(bluegoti, (xcb1, ycb1))
+            GD.blit(bluegoti, (xcb2, ycb2))
+            GD.blit(bluegoti, (xcb3, ycb3))
 
         clock.tick(7)
         pygame.display.update()
