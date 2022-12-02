@@ -98,6 +98,8 @@ def goti_red(a):
 
 
 def goti_yellow(a):
+    if a > 32:
+        return
     l1 = [[524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270],
           [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589],
           [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270],
@@ -109,6 +111,8 @@ def goti_yellow(a):
 
 
 def goti_green(a):
+    if a > 32:
+        return
     l1 = [[484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161],
           [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318], [887, 370],
           [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580],
@@ -120,6 +124,8 @@ def goti_green(a):
 
 
 def goti_blue(a):
+    if a > 32:
+        return
     l1 = [[853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580],
           [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422], [452, 371],
           [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160],
@@ -468,7 +474,7 @@ def play(b):
                     if not six:
                         t += 1
                     xcr, ycr = goti_red(p1score)
-                    if p1score == 100:
+                    if p1score == 32:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 1 Wins", 650, 50, 50, black)
@@ -486,7 +492,7 @@ def play(b):
                         if b < 3 or b == 21:
                             t = 1
 
-                    if p2score == 100:
+                    if p2score == 32:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Computer Wins", 650, 50, 50, black)
@@ -500,7 +506,7 @@ def play(b):
                     xcr, ycr = goti_red(p1score)
                     if not six:
                         t += 1
-                    if p1score == 100:
+                    if p1score == 32:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 1 Wins", 650, 50, 50, black)
@@ -517,7 +523,7 @@ def play(b):
                         if b < 3:
                             t = 1
 
-                    if p2score == 100:
+                    if p2score == 32:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 2 Wins", 650, 50, 50, black)
@@ -535,7 +541,7 @@ def play(b):
                         if b < 4:
                             t = 1
 
-                    if p3score == 100:
+                    if p3score == 32:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 3 Wins", 650, 50, 50, black)
@@ -553,7 +559,7 @@ def play(b):
                         if b < 5:
                             t = 1
 
-                    if p4score == 100:
+                    if p4score == 32:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 4 Wins", 650, 50, 50, black)
