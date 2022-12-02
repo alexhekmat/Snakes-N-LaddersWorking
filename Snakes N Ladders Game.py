@@ -371,11 +371,11 @@ def play(b):
 
     xcg = 445
     ycg = 514
-    xcg1 = 462
+    xcg1 = 464
     ycg1 = 548
-    xcg2 = 487
-    ycg2 = 585
-    xcg3 = 520
+    xcg2 = 490
+    ycg2 = 578
+    xcg3 = 522
     ycg3 = 594
 
     ##Yellow Homes
@@ -384,9 +384,9 @@ def play(b):
     ycy = 147
     xcy1 = 490
     ycy1 = 167
-    xcy2 = 463
+    xcy2 = 464
     ycy2 = 195
-    xcy3 = 444
+    xcy3 = 445
     ycy3 = 227
 
 
@@ -394,11 +394,11 @@ def play(b):
 
     xcb = 892
     ycb = 226
-    xcb1 = 866
+    xcb1 = 871
     ycb1 = 193
-    xcb2 = 839
+    xcb2 = 844
     ycb2 = 166
-    xcb3 = 807
+    xcb3 = 812
     ycb3 = 148
 
 
