@@ -303,6 +303,8 @@ def main():
             pygame.mixer.music.pause()
         if button2("Play Music", mouse[0], mouse[1], 1166, 75, 200, 50, purple, b_purple, 25):
             pygame.mixer.music.unpause()
+        if button2("Credits", mouse[0], mouse[1], 1166, 150, 200, 50, purple, b_purple, 25):
+            credit()
 
         pygame.display.update()
 
@@ -369,11 +371,11 @@ def play(b):
 
     xcg = 445
     ycg = 514
-    xcg1 = 464
+    xcg1 = 462
     ycg1 = 548
-    xcg2 = 490
-    ycg2 = 578
-    xcg3 = 522
+    xcg2 = 487
+    ycg2 = 585
+    xcg3 = 520
     ycg3 = 594
 
     ##Yellow Homes
@@ -392,11 +394,11 @@ def play(b):
 
     xcb = 892
     ycb = 226
-    xcb1 = 871
+    xcb1 = 866
     ycb1 = 193
-    xcb2 = 844
+    xcb2 = 839
     ycb2 = 166
-    xcb3 = 812
+    xcb3 = 807
     ycb3 = 148
 
 
@@ -433,15 +435,27 @@ def play(b):
     if b == 21:
         p2 = "Computer"
         p2score1 = -1
+        p2score2 = -1
+        p2score3 = -1
+        p2score4 = -1
     if 5 > b > 1:
         p2 = "Player 2"
         p2score1 = -1
+        p2score2 = -1
+        p2score3 = -1
+        p2score4 = -1
     if 5 > b > 2:
         p3 = "Player 3"
         p3score1 = -1
+        p3score2 = -1
+        p3score3 = -1
+        p3score4 = -1
     if 5 > b > 3:
         p4 = "Player 4"
         p4score1 = -1
+        p4score2 = -1
+        p4score3 = -1
+        p4score4 = -1
     t = 1
     play = True
     while True:
@@ -470,12 +484,27 @@ def play(b):
                         t += 1
                     xcr, ycr = goti_red(p1score1)
                     if p1score1 == 31:
-                        time = pygame.time.get_ticks()
-                        while pygame.time.get_ticks() - time < 2000:
-                            message_display1("Player 1 Wins", 650, 50, 50, black)
-                            pygame.mixer.Sound.play(win)
-                            pygame.display.update()
-                        break
+                        p1score2, six = turn(p1score2)
+                        if not six:
+                            t += 1
+                        xcr1, ycr1 = goti_red(p1score2)
+                        if p1score2 == 31:
+                            p1score3, six = turn(p1score3)
+                            if not six:
+                                t += 1
+                            xcr2, ycr2 = goti_red(p1score3)
+                            if p1score3 == 31:
+                                p1score4, six = turn(p1score4)
+                                if not six:
+                                    t += 1
+                                xcr3, ycr3 = goti_red(p1score4)
+                                if p1score4 == 31:
+                                    time = pygame.time.get_ticks()
+                                    while pygame.time.get_ticks() - time < 2000:
+                                        message_display1("Player 1 Wins", 650, 50, 50, black)
+                                        pygame.mixer.Sound.play(win)
+                                        pygame.display.update()
+                                    break
 
             button1("Computer", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30)
             if True:
@@ -486,28 +515,64 @@ def play(b):
                         t += 1
                         if b < 3 or b == 21:
                             t = 1
-
                     if p2score1 == 31:
-                        time = pygame.time.get_ticks()
-                        while pygame.time.get_ticks() - time < 2000:
-                            message_display1("Computer Wins", 650, 50, 50, black)
-                            pygame.mixer.Sound.play(lose)
-                            pygame.display.update()
-                        break
+                        p2score2, six = turn(p2score2)
+                        if not six:
+                            t += 1
+                        xcy1, ycy1 = goti_yellow(p2score2)
+                        if p2score2 == 31:
+                            p2score3, six = turn(p2score3)
+                            if not six:
+                                t += 1
+                            xcy2, ycy2 = goti_yellow(p2score3)
+                            if p2score3 == 31:
+                                p2score4, six = turn(p2score4)
+                                if not six:
+                                    t += 1
+                                xcy3, ycy3 = goti_yellow(p2score4)
+                                if p2score4 == 31:
+                                    time = pygame.time.get_ticks()
+                                    while pygame.time.get_ticks() - time < 2000:
+                                        message_display1("Computer Wins", 650, 50, 50, black)
+                                        pygame.mixer.Sound.play(win)
+                                        pygame.display.update()
+                                    break
+
+
+
+
+
+
+
         if 5 > b > 1:
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
                 if t == 1:
                     p1score1, six = turn(p1score1)
-                    xcr, ycr = goti_red(p1score1)
                     if not six:
                         t += 1
+                    xcr, ycr = goti_red(p1score1)
                     if p1score1 == 31:
-                        time = pygame.time.get_ticks()
-                        while pygame.time.get_ticks() - time < 2000:
-                            message_display1("Player 1 Wins", 650, 50, 50, black)
-                            pygame.mixer.Sound.play(win)
-                            pygame.display.update()
-                        break
+                        p1score2, six = turn(p1score2)
+                        if not six:
+                            t += 1
+                        xcr1, ycr1 = goti_red(p1score2)
+                        if p1score2 == 31:
+                            p1score3, six = turn(p1score3)
+                            if not six:
+                                t += 1
+                            xcr2, ycr2 = goti_red(p1score3)
+                            if p1score3 == 31:
+                                p1score4, six = turn(p1score4)
+                                if not six:
+                                    t += 1
+                                xcr3, ycr3 = goti_red(p1score4)
+                                if p1score4 == 31:
+                                    time = pygame.time.get_ticks()
+                                    while pygame.time.get_ticks() - time < 2000:
+                                        message_display1("Player 1 Wins", 650, 50, 50, black)
+                                        pygame.mixer.Sound.play(win)
+                                        pygame.display.update()
+                                    break
 
             if button1("Player 2", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30):
                 if t == 2:
@@ -515,16 +580,30 @@ def play(b):
                     xcy, ycy = goti_yellow(p2score1)
                     if not six:
                         t += 1
-                        if b < 3:
+                        if b < 3 or b == 21:
                             t = 1
-
                     if p2score1 == 31:
-                        time = pygame.time.get_ticks()
-                        while pygame.time.get_ticks() - time < 2000:
-                            message_display1("Player 2 Wins", 650, 50, 50, black)
-                            pygame.mixer.Sound.play(win)
-                            pygame.display.update()
-                        break
+                        p2score2, six = turn(p2score2)
+                        if not six:
+                            t += 1
+                        xcy1, ycy1 = goti_yellow(p2score2)
+                        if p2score2 == 31:
+                            p2score3, six = turn(p2score3)
+                            if not six:
+                                t += 1
+                            xcy2, ycy2 = goti_yellow(p2score3)
+                            if p2score3 == 31:
+                                p2score4, six = turn(p2score4)
+                                if not six:
+                                    t += 1
+                                xcy3, ycy3 = goti_yellow(p2score4)
+                                if p2score4 == 31:
+                                    time = pygame.time.get_ticks()
+                                    while pygame.time.get_ticks() - time < 2000:
+                                        message_display1("Player 2 Wins", 650, 50, 50, black)
+                                        pygame.mixer.Sound.play(win)
+                                        pygame.display.update()
+                                    break
 
         if 5 > b > 2:
             if button1("Player 3", mouse[0], mouse[1], 700, 700, 200, 50, green, grey, 30):
@@ -537,12 +616,27 @@ def play(b):
                             t = 1
 
                     if p3score1 == 31:
-                        time = pygame.time.get_ticks()
-                        while pygame.time.get_ticks() - time < 2000:
-                            message_display1("Player 3 Wins", 650, 50, 50, black)
-                            pygame.mixer.Sound.play(win)
-                            pygame.display.update()
-                        break
+                        p3score2, six = turn(p3score2)
+                        if not six:
+                            t += 1
+                        xcg1, ycg1 = goti_green(p3score2)
+                        if p3score2 == 31:
+                            p3score3, six = turn(p3score3)
+                            if not six:
+                                t += 1
+                            xcg2, ycg2 = goti_green(p3score3)
+                            if p3score3 == 31:
+                                p3score4, six = turn(p3score4)
+                                if not six:
+                                    t += 1
+                                xcg3, ycg3 = goti_green(p3score4)
+                                if p3score4 == 31:
+                                    time = pygame.time.get_ticks()
+                                    while pygame.time.get_ticks() - time < 2000:
+                                        message_display1("Player 3 Wins", 650, 50, 50, black)
+                                        pygame.mixer.Sound.play(win)
+                                        pygame.display.update()
+                                    break
 
         if 5 > b > 3:
             if button1("Player 4", mouse[0], mouse[1], 1000, 700, 200, 50, blue, grey, 30):
@@ -555,12 +649,27 @@ def play(b):
                             t = 1
 
                     if p4score1 == 31:
-                        time = pygame.time.get_ticks()
-                        while pygame.time.get_ticks() - time < 2000:
-                            message_display1("Player 4 Wins", 650, 50, 50, black)
-                            pygame.mixer.Sound.play(win)
-                            pygame.display.update()
-                        break
+                        p4score2, six = turn(p4score2)
+                        if not six:
+                            t += 1
+                        xcb1, ycb1 = goti_blue(p4score2)
+                        if p4score2 == 31:
+                            p4score3, six = turn(p4score3)
+                            if not six:
+                                t += 1
+                            xcb2, ycb2 = goti_blue(p4score3)
+                            if p4score3 == 31:
+                                p4score4, six = turn(p4score4)
+                                if not six:
+                                    t += 1
+                                xcb3, ycb3 = goti_blue(p4score4)
+                                if p4score4 == 31:
+                                    time = pygame.time.get_ticks()
+                                    while pygame.time.get_ticks() - time < 2000:
+                                        message_display1("Player 4 Wins", 650, 50, 50, black)
+                                        pygame.mixer.Sound.play(win)
+                                        pygame.display.update()
+                                    break
 
         b6 = button("Back", mouse[0], mouse[1], 0, 0, 200, 50, red, b_red, 30, 7)
         GD.blit(redgoti, (xcr, ycr))
