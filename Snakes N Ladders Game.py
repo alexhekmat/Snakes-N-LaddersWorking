@@ -471,7 +471,7 @@ def play(b):
                     if not six:
                         t += 1
                     xcr, ycr = goti_red(p1score1)
-                    if p1score1 == 100:
+                    if p1score1 == 31:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 1 Wins", 650, 50, 50, black)
@@ -489,7 +489,7 @@ def play(b):
                         if b < 3 or b == 21:
                             t = 1
 
-                    if p2score1 == 100:
+                    if p2score1 == 31:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Computer Wins", 650, 50, 50, black)
@@ -503,7 +503,7 @@ def play(b):
                     xcr, ycr = goti_red(p1score1)
                     if not six:
                         t += 1
-                    if p1score1 == 100:
+                    if p1score1 == 31:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 1 Wins", 650, 50, 50, black)
@@ -520,7 +520,7 @@ def play(b):
                         if b < 3:
                             t = 1
 
-                    if p2score1 == 100:
+                    if p2score1 == 31:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 2 Wins", 650, 50, 50, black)
@@ -538,7 +538,7 @@ def play(b):
                         if b < 4:
                             t = 1
 
-                    if p3score1 == 100:
+                    if p3score1 == 31:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 3 Wins", 650, 50, 50, black)
@@ -556,7 +556,7 @@ def play(b):
                         if b < 5:
                             t = 1
 
-                    if p4score1 == 100:
+                    if p4score1 == 31:
                         time = pygame.time.get_ticks()
                         while pygame.time.get_ticks() - time < 2000:
                             message_display1("Player 4 Wins", 650, 50, 50, black)
