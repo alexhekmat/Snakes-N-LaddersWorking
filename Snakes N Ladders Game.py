@@ -358,6 +358,9 @@ def play(b):
     GD.blit(board, (w / 2 - 250, h / 2 - 250))
     xcr = 814
     xcy = 524
+    xcr1 = 820
+    ycr1 = 540
+
     xcg = 445
     xcb = 892
     ycr = 594
@@ -365,6 +368,10 @@ def play(b):
     ycg = 514
     ycb = 226
 
+
+
+    GD.blit(redgoti, (xcr, ycr))
+    GD.blit(redgoti, (xcr1, ycr1))
     if 5 > b > 1 or b == 21:
         GD.blit(yellowgoti, (xcy, ycy))
     if 5 > b > 2 or b == 21:
@@ -507,6 +514,7 @@ def play(b):
 
         b6 = button("Back", mouse[0], mouse[1], 0, 0, 200, 50, red, b_red, 30, 7)
         GD.blit(redgoti, (xcr, ycr))
+        GD.blit(redgoti, (xcr1, ycr1))
         if 5 > b > 1 or b == 21:
             GD.blit(yellowgoti, (xcy, ycy))
 
