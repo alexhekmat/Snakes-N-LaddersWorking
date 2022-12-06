@@ -488,8 +488,6 @@ def main():
             pygame.mixer.music.pause()
         if button2("Play Music", mouse[0], mouse[1], 1166, 75, 200, 50, purple, b_purple, 25):
             pygame.mixer.music.unpause()
-        if button2("Credits", mouse[0], mouse[1], 1166, 150, 200, 50, purple, b_purple, 25):
-            credit()
 
         pygame.display.update()
 
