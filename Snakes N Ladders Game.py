@@ -320,12 +320,18 @@ def button1(text, xmouse, ymouse, x, y, w, h, i, a, fs):
 
 # Turn
 def turn(score):
+    scorecreate = score
     a = randint(1, 6)  # player dice roll
+    p = dice(a)
+    scorecreate += a
+    if scorecreate > 32:
+        return score, False
+
     if a == 6:
         six = True
     else:
         six = False
-    p = dice(a)
+
     if score == 0:
         if a == 6:
             score += 1
@@ -333,7 +339,63 @@ def turn(score):
         score += a
     return score, six
 
+def turn1(score):
+    scorecreate = score
+    a = randint(1, 6)  # player dice roll
+    p = dice(a)
+    scorecreate += a
+    if scorecreate > 31:
+        return score, False
 
+    if a == 6:
+        six = True
+    else:
+        six = False
+
+    if score == 0:
+        if a == 6:
+            score += 1
+    else:
+        score += a
+    return score, six
+def turn2(score):
+    scorecreate = score
+    a = randint(1, 6)  # player dice roll
+    p = dice(a)
+    scorecreate += a
+    if scorecreate > 30:
+        return score, False
+
+    if a == 6:
+        six = True
+    else:
+        six = False
+
+    if score == 0:
+        if a == 6:
+            score += 1
+    else:
+        score += a
+    return score, six
+def turn3(score):
+    scorecreate = score
+    a = randint(1, 6)  # player dice roll
+    p = dice(a)
+    scorecreate += a
+    if scorecreate > 29:
+        return score, False
+
+    if a == 6:
+        six = True
+    else:
+        six = False
+
+    if score == 0:
+        if a == 6:
+            score += 1
+    else:
+        score += a
+    return score, six
 # Quitting:
 def Quit():
     pygame.quit()
@@ -616,9 +678,9 @@ def play(b):
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
                 if t == 1:
                     p1score1, six = turn(p1score1)
+                    xcr, ycr = goti_red1(p1score1)
                     if not six:
                         t += 1
-                    xcr, ycr = goti_red1(p1score1)
                     if p1score1 == 32:
                         p1score2, six = turn(p1score2)
                         if not six:
@@ -652,17 +714,17 @@ def play(b):
                         if b < 3 or b == 21:
                             t = 1
                     if p2score1 == 32:
-                        p2score2, six = turn(p2score2)
+                        p2score2, six = turn1(p2score2)
                         if not six:
                             t += 1
                         xcy1, ycy1 = goti_yellow2(p2score2)
                         if p2score2 == 31:
-                            p2score3, six = turn(p2score3)
+                            p2score3, six = turn2(p2score3)
                             if not six:
                                 t += 1
                             xcy2, ycy2 = goti_yellow3(p2score3)
                             if p2score3 == 30:
-                                p2score4, six = turn(p2score4)
+                                p2score4, six = turn3(p2score4)
                                 if not six:
                                     t += 1
                                 xcy3, ycy3 = goti_yellow4(p2score4)
@@ -688,17 +750,17 @@ def play(b):
                         t += 1
                     xcr, ycr = goti_red1(p1score1)
                     if p1score1 == 32:
-                        p1score2, six = turn(p1score2)
+                        p1score2, six = turn1(p1score2)
                         if not six:
                             t += 1
                         xcr1, ycr1 = goti_red2(p1score2)
                         if p1score2 == 31:
-                            p1score3, six = turn(p1score3)
+                            p1score3, six = turn2(p1score3)
                             if not six:
                                 t += 1
                             xcr2, ycr2 = goti_red3(p1score3)
                             if p1score3 == 30:
-                                p1score4, six = turn(p1score4)
+                                p1score4, six = turn3(p1score4)
                                 if not six:
                                     t += 1
                                 xcr3, ycr3 = goti_red4(p1score4)
