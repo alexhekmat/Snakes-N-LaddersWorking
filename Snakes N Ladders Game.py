@@ -13,7 +13,7 @@ GD = pygame.display.set_mode((w, h), pygame.FULLSCREEN)
 pygame.display.set_caption("Trouble")
 pygame.display.set_icon(icon)
 pygame.display.update()
-##test
+#test
 # Graphics:
 black = (10, 10, 10)
 white = (250, 250, 250)
@@ -765,16 +765,22 @@ def play(b):
                         p2score2, six = turn_goti2(p2score2)
                         if not six:
                             t += 1
+                            if b < 3 or b == 21:
+                                t = 1
                         xcy1, ycy1 = goti_yellow2(p2score2)
                     elif p2score3 < 30:
                         p2score3, six = turn_goti3(p2score3)
                         if not six:
                             t += 1
+                            if b < 3 or b == 21:
+                                t = 1
                         xcy2, ycy2 = goti_yellow3(p2score3)
                     else:
                         p2score4, six = turn_goti4(p2score4)
                         if not six:
                             t += 1
+                            if b < 3 or b == 21:
+                                t = 1
                         xcy3, ycy3 = goti_yellow4(p2score4)
                         if p2score4 == 29:
                             time = pygame.time.get_ticks()
@@ -798,16 +804,22 @@ def play(b):
                         p3score2, six = turn_goti2(p3score2)
                         if not six:
                             t += 1
+                            if b < 4:
+                                t = 1
                         xcg1, ycg1 = goti_green2(p3score2)
                     elif p3score3 < 30:
                         p3score3, six = turn_goti3(p3score3)
                         if not six:
                             t += 1
+                            if b < 4:
+                                t = 1
                         xcg2, ycg2 = goti_green3(p3score3)
                     else:
                         p3score4, six = turn_goti4(p3score4)
                         if not six:
                             t += 1
+                            if b < 4:
+                                t = 1
                         xcg3, ycg3 = goti_green4(p3score4)
                         if p3score4 == 29:
                             time = pygame.time.get_ticks()
