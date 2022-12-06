@@ -8,10 +8,8 @@ pygame.init()
 w = 1366
 h = 768
 
-icon = pygame.image.load("icon.jpg")
 GD = pygame.display.set_mode((w, h), pygame.FULLSCREEN)
 pygame.display.set_caption("Trouble")
-pygame.display.set_icon(icon)
 pygame.display.update()
 #test
 # Graphics:
@@ -46,7 +44,6 @@ intbg2 = pygame.image.load("intropic2.jpg")
 intbg3 = pygame.image.load("intropic3.jpg")
 intbg4 = pygame.image.load("intropic4.jpg")
 intbg5 = pygame.image.load("intropic5.jpg")
-credits1 = pygame.image.load("credits.jpg")
 
 pygame.mixer.music.load("music.wav")
 win = pygame.mixer.Sound("win.wav")
