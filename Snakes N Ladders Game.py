@@ -90,7 +90,7 @@ def goti_red1(a):
     l1 = [[814, 594], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
           [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152],
           [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421],
-          [877, 468], [853, 514], [815, 515], [789, 490], [763, 465], [737, 437]]
+          [877, 468], [853, 514], [815, 515], [790, 490], [763, 465], [737, 437]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -101,7 +101,7 @@ def goti_red2(a):
     l1 = [[846, 573], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
           [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152],
           [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421],
-          [877, 468], [853, 514], [815, 515], [789, 490], [763, 465]]
+          [877, 468], [853, 514], [815, 515], [790, 490], [763, 465]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -112,7 +112,7 @@ def goti_red3(a):
     l1 = [[871, 547], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
           [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152],
           [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421],
-          [877, 468], [853, 514], [815, 515], [789, 490]]
+          [877, 468], [853, 514], [815, 515], [790, 490]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -134,7 +134,7 @@ def goti_yellow1(a):
     l1 = [[524, 147], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225],
           [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589],
           [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320],
-          [460, 270], [485, 227], [518, 223], [547, 250], [574, 276], [599, 303]]
+          [460, 270], [485, 227], [518, 223], [547, 250], [574, 276], [601, 303]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -178,7 +178,7 @@ def goti_green1(a):
     l1 = [[445, 514], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
           [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589],
-          [569, 580], [525, 557], [517, 517], [544, 492], [569, 466], [597, 439]]
+          [569, 580], [525, 557], [520, 517], [547, 492], [572, 466], [600, 439]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -189,7 +189,7 @@ def goti_green2(a):
     l1 = [[465, 514], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
           [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589],
-          [569, 580], [525, 557], [517, 517], [544, 492], [569, 466]]
+          [569, 580], [525, 557], [520, 517], [547, 492], [572, 466]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -200,7 +200,7 @@ def goti_green3(a):
     l1 = [[491, 577], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
           [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589],
-          [569, 580], [525, 557], [517, 517], [544, 492]]
+          [569, 580], [525, 557], [520, 517], [547, 492]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -211,7 +211,7 @@ def goti_green4(a):
     l1 = [[523, 594], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
           [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589],
-          [569, 580], [525, 557], [517, 517]]
+          [569, 580], [525, 557], [520, 517]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -222,7 +222,7 @@ def goti_blue1(a):
     l1 = [[892, 226], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
           [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152],
-          [769, 160], [812, 186], [809, 223], [784, 249], [756, 276], [730, 302]]
+          [769, 160], [812, 186], [813, 223], [788, 249], [760, 276], [734, 302]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -233,7 +233,7 @@ def goti_blue2(a):
     l1 = [[871, 193], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
           [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152],
-          [769, 160], [812, 186], [809, 223], [784, 249], [756, 276]]
+          [769, 160], [812, 186], [813, 223], [788, 249], [760, 276]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -244,7 +244,7 @@ def goti_blue3(a):
     l1 = [[845, 166], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
           [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152],
-          [769, 160], [812, 186], [809, 223], [784, 249]]
+          [769, 160], [812, 186], [813, 223], [788, 249]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -255,7 +255,7 @@ def goti_blue4(a):
     l1 = [[812, 147], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
           [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152],
-          [769, 160], [812, 186], [809, 223]]
+          [769, 160], [812, 186], [813, 223]]
     l2 = l1[a]
     x = l2[0]
     y = l2[1]
@@ -319,83 +319,70 @@ def button1(text, xmouse, ymouse, x, y, w, h, i, a, fs):
 
 
 # Turn
-def turn(score):
-    scorecreate = score
+def turn_goti1(score):
     a = randint(1, 6)  # player dice roll
-    p = dice(a)
-    scorecreate += a
-    if scorecreate > 32:
-        return score, False, True
-
     if a == 6:
         six = True
     else:
         six = False
-
-    if score == 0:
-        if a == 6:
-            score += 1
-    else:
-        score += a
-    return score, six, False
-
-def turn1(score):
-    scorecreate = score
-    a = randint(1, 6)  # player dice roll
     p = dice(a)
-    scorecreate += a
-    if scorecreate > 31:
-        return score, False
-
-    if a == 6:
-        six = True
-    else:
-        six = False
-
-    if score == 0:
-        if a == 6:
-            score += 1
-    else:
-        score += a
+    if score + a < 33:
+        if score == 0:
+            if a == 6:
+                score += 1
+        else:
+            score += a
     return score, six
-def turn2(score):
-    scorecreate = score
-    a = randint(1, 6)  # player dice roll
-    p = dice(a)
-    scorecreate += a
-    if scorecreate > 30:
-        return score, False
 
+
+def turn_goti2(score):
+    a = randint(1, 6)  # player dice roll
     if a == 6:
         six = True
     else:
         six = False
-
-    if score == 0:
-        if a == 6:
-            score += 1
-    else:
-        score += a
-    return score, six
-def turn3(score):
-    scorecreate = score
-    a = randint(1, 6)  # player dice roll
     p = dice(a)
-    scorecreate += a
-    if scorecreate > 29:
-        return score, False
+    if score + a < 32:
+        if score == 0:
+            if a == 6:
+                score += 1
+        else:
+            score += a
+    return score, six
 
+
+def turn_goti3(score):
+    a = randint(1, 6)  # player dice roll
     if a == 6:
         six = True
     else:
         six = False
-
-    if score == 0:
-        if a == 6:
-            score += 1
-    else:
-        score += a
+    p = dice(a)
+    if score + a < 31:
+        if score == 0:
+            if a == 6:
+                score += 1
+        else:
+            score += a
     return score, six
+
+
+def turn_goti4(score):
+    a = randint(1, 6)  # player dice roll
+    if a == 6:
+        six = True
+    else:
+        six = False
+    p = dice(a)
+    if score + a < 30:
+        if score == 0:
+            if a == 6:
+                score += 1
+        else:
+            score += a
+    return score, six
+
+
 # Quitting:
 def Quit():
     pygame.quit()
@@ -501,6 +488,8 @@ def main():
             pygame.mixer.music.pause()
         if button2("Play Music", mouse[0], mouse[1], 1166, 75, 200, 50, purple, b_purple, 25):
             pygame.mixer.music.unpause()
+        if button2("Credits", mouse[0], mouse[1], 1166, 150, 200, 50, purple, b_purple, 25):
+            credit()
 
         pygame.display.update()
 
@@ -585,7 +574,6 @@ def play(b):
     xcy3 = 446
     ycy3 = 226
 
-
     ##Blue homes
 
     xcb = 892
@@ -596,13 +584,6 @@ def play(b):
     ycb2 = 166
     xcb3 = 812
     ycb3 = 147
-
-
-
-
-
-
-
 
     GD.blit(redgoti, (xcr, ycr))
     GD.blit(redgoti, (xcr1, ycr1))
@@ -675,203 +656,202 @@ def play(b):
 
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
                 if t == 1:
-                    check = False
-                    if check == True:
-                        p1score2, six = turn1(p1score2)
+                    if p1score1 < 32:
+                        p1score1, six = turn_goti1(p1score1)
+                        if not six:
+                            t += 1
+                        xcr, ycr = goti_red1(p1score1)
+                    elif p1score2 < 31:
+                        p1score2, six = turn_goti2(p1score2)
                         if not six:
                             t += 1
                         xcr1, ycr1 = goti_red2(p1score2)
-                    p1score1, six, check = turn(p1score1)
-                    xcr, ycr = goti_red1(p1score1)
-                    if not six:
-                        t += 1
-                    if p1score1 == 32:
-                        p1score2, six = turn1(p1score2)
+                    elif p1score3 < 30:
+                        p1score3, six = turn_goti3(p1score3)
                         if not six:
                             t += 1
-                        xcr1, ycr1 = goti_red2(p1score2)
-                        if p1score2 == 31:
-                            p1score3, six = turn2(p1score3)
-                            if not six:
-                                t += 1
-                            xcr2, ycr2 = goti_red3(p1score3)
-                            if p1score3 == 30:
-                                p1score4, six = turn3(p1score4)
-                                if not six:
-                                    t += 1
-                                xcr3, ycr3 = goti_red4(p1score4)
-                                if p1score4 == 29:
-                                    time = pygame.time.get_ticks()
-                                    while pygame.time.get_ticks() - time < 2000:
-                                        message_display1("Player 1 Wins", 650, 50, 50, black)
-                                        pygame.mixer.Sound.play(win)
-                                        pygame.display.update()
-                                    break
+                        xcr2, ycr2 = goti_red3(p1score3)
+                    else:
+                        p1score4, six = turn_goti4(p1score4)
+                        if not six:
+                            t += 1
+                        xcr3, ycr3 = goti_red4(p1score4)
+                        if p1score4 == 29:
+                            time = pygame.time.get_ticks()
+                            while pygame.time.get_ticks() - time < 2000:
+                                message_display1("Player 1 Wins", 650, 50, 50, black)
+                                pygame.mixer.Sound.play(win)
+                                pygame.display.update()
+                            break
 
             button1("Computer", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30)
             if True:
                 if t == 2:
-                    p2score1, six, check = turn(p2score1)
-                    xcy, ycy = goti_yellow1(p2score1)
-                    if not six:
-                        t += 1
-                        if b < 3 or b == 21:
-                            t = 1
-                    if p2score1 == 32:
-                        p2score2, six = turn1(p2score2)
+                    if p2score1 < 32:
+                        p2score1, six = turn_goti1(p2score1)
+                        xcy, ycy = goti_yellow1(p2score1)
+                        if not six:
+                            t += 1
+                            if b < 3 or b == 21:
+                                t = 1
+                    elif p2score2 < 31:
+                        p2score2, six = turn_goti2(p2score2)
                         if not six:
                             t += 1
                         xcy1, ycy1 = goti_yellow2(p2score2)
-                        if p2score2 == 31:
-                            p2score3, six = turn2(p2score3)
-                            if not six:
-                                t += 1
-                            xcy2, ycy2 = goti_yellow3(p2score3)
-                            if p2score3 == 30:
-                                p2score4, six = turn3(p2score4)
-                                if not six:
-                                    t += 1
-                                xcy3, ycy3 = goti_yellow4(p2score4)
-                                if p2score4 == 29:
-                                    time = pygame.time.get_ticks()
-                                    while pygame.time.get_ticks() - time < 2000:
-                                        message_display1("Computer Wins", 650, 50, 50, black)
-                                        pygame.mixer.Sound.play(win)
-                                        pygame.display.update()
-                                    break
-
-
-
-
-
-
+                    elif p2score3 < 30:
+                        p2score3, six = turn_goti3(p2score3)
+                        if not six:
+                            t += 1
+                        xcy2, ycy2 = goti_yellow3(p2score3)
+                    else:
+                        p2score4, six = turn_goti4(p2score4)
+                        if not six:
+                            t += 1
+                        xcy3, ycy3 = goti_yellow4(p2score4)
+                        if p2score4 == 29:
+                            time = pygame.time.get_ticks()
+                            while pygame.time.get_ticks() - time < 2000:
+                                message_display1("Computer Wins", 650, 50, 50, black)
+                                pygame.mixer.Sound.play(win)
+                                pygame.display.update()
+                            break
 
         if 5 > b > 1:
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
                 if t == 1:
-                    p1score1, six = turn(p1score1)
-                    if not six:
-                        t += 1
-                    xcr, ycr = goti_red1(p1score1)
-                    if p1score1 == 32:
-                        p1score2, six = turn1(p1score2)
+                    if p1score1 < 32:
+                        p1score1, six = turn_goti1(p1score1)
+                        if not six:
+                            t += 1
+                        xcr, ycr = goti_red1(p1score1)
+                    elif p1score2 < 31:
+                        p1score2, six = turn_goti2(p1score2)
                         if not six:
                             t += 1
                         xcr1, ycr1 = goti_red2(p1score2)
-                        if p1score2 == 31:
-                            p1score3, six = turn2(p1score3)
-                            if not six:
-                                t += 1
-                            xcr2, ycr2 = goti_red3(p1score3)
-                            if p1score3 == 30:
-                                p1score4, six = turn3(p1score4)
-                                if not six:
-                                    t += 1
-                                xcr3, ycr3 = goti_red4(p1score4)
-                                if p1score4 == 29:
-                                    time = pygame.time.get_ticks()
-                                    while pygame.time.get_ticks() - time < 2000:
-                                        message_display1("Player 1 Wins", 650, 50, 50, black)
-                                        pygame.mixer.Sound.play(win)
-                                        pygame.display.update()
-                                    break
+                    elif p1score3 < 30:
+                        p1score3, six = turn_goti3(p1score3)
+                        if not six:
+                            t += 1
+                        xcr2, ycr2 = goti_red3(p1score3)
+                    else:
+                        p1score4, six = turn_goti4(p1score4)
+                        if not six:
+                            t += 1
+                        xcr3, ycr3 = goti_red4(p1score4)
+                        if p1score4 == 29:
+                            time = pygame.time.get_ticks()
+                            while pygame.time.get_ticks() - time < 2000:
+                                message_display1("Player 1 Wins", 650, 50, 50, black)
+                                pygame.mixer.Sound.play(win)
+                                pygame.display.update()
+                            break
 
             if button1("Player 2", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30):
                 if t == 2:
-                    p2score1, six = turn(p2score1)
-                    xcy, ycy = goti_yellow1(p2score1)
-                    if not six:
-                        t += 1
-                        if b < 3 or b == 21:
-                            t = 1
-                    if p2score1 == 32:
-                        p2score2, six = turn(p2score2)
+                    if p2score1 < 32:
+                        p2score1, six = turn_goti1(p2score1)
+                        xcy, ycy = goti_yellow1(p2score1)
+                        if not six:
+                            t += 1
+                            if b < 3 or b == 21:
+                                t = 1
+                    elif p2score2 < 31:
+                        p2score2, six = turn_goti2(p2score2)
                         if not six:
                             t += 1
                         xcy1, ycy1 = goti_yellow2(p2score2)
-                        if p2score2 == 31:
-                            p2score3, six = turn(p2score3)
-                            if not six:
-                                t += 1
-                            xcy2, ycy2 = goti_yellow3(p2score3)
-                            if p2score3 == 30:
-                                p2score4, six = turn(p2score4)
-                                if not six:
-                                    t += 1
-                                xcy3, ycy3 = goti_yellow4(p2score4)
-                                if p2score4 == 29:
-                                    time = pygame.time.get_ticks()
-                                    while pygame.time.get_ticks() - time < 2000:
-                                        message_display1("Player 2 Wins", 650, 50, 50, black)
-                                        pygame.mixer.Sound.play(win)
-                                        pygame.display.update()
-                                    break
+                    elif p2score3 < 30:
+                        p2score3, six = turn_goti3(p2score3)
+                        if not six:
+                            t += 1
+                        xcy2, ycy2 = goti_yellow3(p2score3)
+                    else:
+                        p2score4, six = turn_goti4(p2score4)
+                        if not six:
+                            t += 1
+                        xcy3, ycy3 = goti_yellow4(p2score4)
+                        if p2score4 == 29:
+                            time = pygame.time.get_ticks()
+                            while pygame.time.get_ticks() - time < 2000:
+                                message_display1("Player 2 Wins", 650, 50, 50, black)
+                                pygame.mixer.Sound.play(win)
+                                pygame.display.update()
+                            break
 
         if 5 > b > 2:
             if button1("Player 3", mouse[0], mouse[1], 700, 700, 200, 50, green, grey, 30):
                 if t == 3:
-                    p3score1, six = turn(p3score1)
-                    xcg, ycg = goti_green1(p3score1)
-                    if not six:
-                        t += 1
-                        if b < 4:
-                            t = 1
-
-                    if p3score1 == 32:
-                        p3score2, six = turn(p3score2)
+                    if p3score1 < 32:
+                        p3score1, six = turn_goti1(p3score1)
+                        xcg, ycg = goti_green1(p3score1)
+                        if not six:
+                            t += 1
+                            if b < 4:
+                                t = 1
+                    elif p3score2 < 31:
+                        p3score2, six = turn_goti2(p3score2)
                         if not six:
                             t += 1
                         xcg1, ycg1 = goti_green2(p3score2)
-                        if p3score2 == 31:
-                            p3score3, six = turn(p3score3)
-                            if not six:
-                                t += 1
-                            xcg2, ycg2 = goti_green3(p3score3)
-                            if p3score3 == 30:
-                                p3score4, six = turn(p3score4)
-                                if not six:
-                                    t += 1
-                                xcg3, ycg3 = goti_green4(p3score4)
-                                if p3score4 == 29:
-                                    time = pygame.time.get_ticks()
-                                    while pygame.time.get_ticks() - time < 2000:
-                                        message_display1("Player 3 Wins", 650, 50, 50, black)
-                                        pygame.mixer.Sound.play(win)
-                                        pygame.display.update()
-                                    break
+                    elif p3score3 < 30:
+                        p3score3, six = turn_goti3(p3score3)
+                        if not six:
+                            t += 1
+                        xcg2, ycg2 = goti_green3(p3score3)
+                    else:
+                        p3score4, six = turn_goti4(p3score4)
+                        if not six:
+                            t += 1
+                        xcg3, ycg3 = goti_green4(p3score4)
+                        if p3score4 == 29:
+                            time = pygame.time.get_ticks()
+                            while pygame.time.get_ticks() - time < 2000:
+                                message_display1("Player 3 Wins", 650, 50, 50, black)
+                                pygame.mixer.Sound.play(win)
+                                pygame.display.update()
+                            break
 
         if 5 > b > 3:
             if button1("Player 4", mouse[0], mouse[1], 1000, 700, 200, 50, blue, grey, 30):
                 if t == 4:
-                    p4score1, six = turn(p4score1)
-                    xcb, ycb = goti_blue1(p4score1)
-                    if not six:
-                        t += 1
-                        if b < 5:
-                            t = 1
-
-                    if p4score1 == 32:
-                        p4score2, six = turn(p4score2)
+                    if p4score1 < 32:
+                        p4score1, six = turn_goti1(p4score1)
+                        xcb, ycb = goti_blue1(p4score1)
                         if not six:
                             t += 1
+                            if b < 5:
+                                t = 1
+
+                    elif p4score2 < 31:
+                        p4score2, six = turn_goti2(p4score2)
+                        if not six:
+                            t += 1
+                            if b < 5:
+                                t = 1
                         xcb1, ycb1 = goti_blue2(p4score2)
-                        if p4score2 == 31:
-                            p4score3, six = turn(p4score3)
-                            if not six:
-                                t += 1
-                            xcb2, ycb2 = goti_blue3(p4score3)
-                            if p4score3 == 30:
-                                p4score4, six = turn(p4score4)
-                                if not six:
-                                    t += 1
-                                xcb3, ycb3 = goti_blue4(p4score4)
-                                if p4score4 == 29:
-                                    time = pygame.time.get_ticks()
-                                    while pygame.time.get_ticks() - time < 2000:
-                                        message_display1("Player 4 Wins", 650, 50, 50, black)
-                                        pygame.mixer.Sound.play(win)
-                                        pygame.display.update()
-                                    break
+                    elif p4score3 < 30:
+                        p4score3, six = turn_goti3(p4score3)
+                        if not six:
+                            t += 1
+                            if b < 5:
+                                t = 1
+                        xcb2, ycb2 = goti_blue3(p4score3)
+                    else:
+                        p4score4, six = turn_goti4(p4score4)
+                        if not six:
+                            t += 1
+                            if b < 5:
+                                t = 1
+                        xcb3, ycb3 = goti_blue4(p4score4)
+                        if p4score4 == 29:
+                            time = pygame.time.get_ticks()
+                            while pygame.time.get_ticks() - time < 2000:
+                                message_display1("Player 4 Wins", 650, 50, 50, black)
+                                pygame.mixer.Sound.play(win)
+                                pygame.display.update()
+                            break
 
         b6 = button("Back", mouse[0], mouse[1], 0, 0, 200, 50, red, b_red, 30, 7)
         GD.blit(redgoti, (xcr, ycr))
