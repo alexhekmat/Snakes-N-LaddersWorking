@@ -533,7 +533,7 @@ def options():
 
         pygame.display.update()
 
-
+#play function
 def play(b):
     b6 = -1
     time = 3000
