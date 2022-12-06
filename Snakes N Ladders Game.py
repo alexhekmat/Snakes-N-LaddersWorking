@@ -49,10 +49,8 @@ intbg5 = pygame.image.load("intropic5.jpg")
 credits1 = pygame.image.load("credits.jpg")
 
 pygame.mixer.music.load("music.wav")
-snakesound = pygame.mixer.Sound("snake.wav")
 win = pygame.mixer.Sound("win.wav")
 lose = pygame.mixer.Sound("lose.wav")
-ladder = pygame.mixer.Sound("ladder.wav")
 
 # mouse pos
 mouse = pygame.mouse.get_pos()
