@@ -283,7 +283,7 @@ def dice(a):
 
     time = pygame.time.get_ticks()
     while pygame.time.get_ticks() - time < 1000:
-        GD.blit(a, (425, 100))
+        GD.blit(a, (410, 90))
         pygame.display.update()
 
     # for mute and unmute
