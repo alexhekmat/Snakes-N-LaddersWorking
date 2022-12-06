@@ -325,7 +325,7 @@ def turn(score):
     p = dice(a)
     scorecreate += a
     if scorecreate > 32:
-        return score, False
+        return score, False, True
 
     if a == 6:
         six = True
@@ -337,7 +337,7 @@ def turn(score):
             score += 1
     else:
         score += a
-    return score, six
+    return score, six, False
 
 def turn1(score):
     scorecreate = score
@@ -501,8 +501,6 @@ def main():
             pygame.mixer.music.pause()
         if button2("Play Music", mouse[0], mouse[1], 1166, 75, 200, 50, purple, b_purple, 25):
             pygame.mixer.music.unpause()
-        if button2("Credits", mouse[0], mouse[1], 1166, 150, 200, 50, purple, b_purple, 25):
-            credit()
 
         pygame.display.update()
 
@@ -677,22 +675,28 @@ def play(b):
 
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
                 if t == 1:
-                    p1score1, six = turn(p1score1)
+                    check = False
+                    if check == True:
+                        p1score2, six = turn1(p1score2)
+                        if not six:
+                            t += 1
+                        xcr1, ycr1 = goti_red2(p1score2)
+                    p1score1, six, check = turn(p1score1)
                     xcr, ycr = goti_red1(p1score1)
                     if not six:
                         t += 1
                     if p1score1 == 32:
-                        p1score2, six = turn(p1score2)
+                        p1score2, six = turn1(p1score2)
                         if not six:
                             t += 1
                         xcr1, ycr1 = goti_red2(p1score2)
                         if p1score2 == 31:
-                            p1score3, six = turn(p1score3)
+                            p1score3, six = turn2(p1score3)
                             if not six:
                                 t += 1
                             xcr2, ycr2 = goti_red3(p1score3)
                             if p1score3 == 30:
-                                p1score4, six = turn(p1score4)
+                                p1score4, six = turn3(p1score4)
                                 if not six:
                                     t += 1
                                 xcr3, ycr3 = goti_red4(p1score4)
@@ -707,7 +711,7 @@ def play(b):
             button1("Computer", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30)
             if True:
                 if t == 2:
-                    p2score1, six = turn(p2score1)
+                    p2score1, six, check = turn(p2score1)
                     xcy, ycy = goti_yellow1(p2score1)
                     if not six:
                         t += 1
