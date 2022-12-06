@@ -698,16 +698,22 @@ def play(b):
                         p2score2, six = turn_goti2(p2score2)
                         if not six:
                             t += 1
+                            if b < 3 or b == 21:
+                                t = 1
                         xcy1, ycy1 = goti_yellow2(p2score2)
                     elif p2score3 < 30:
                         p2score3, six = turn_goti3(p2score3)
                         if not six:
                             t += 1
+                            if b < 3 or b == 21:
+                                t = 1
                         xcy2, ycy2 = goti_yellow3(p2score3)
                     else:
                         p2score4, six = turn_goti4(p2score4)
                         if not six:
                             t += 1
+                            if b < 3 or b == 21:
+                                t = 1
                         xcy3, ycy3 = goti_yellow4(p2score4)
                         if p2score4 == 29:
                             time = pygame.time.get_ticks()
