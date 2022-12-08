@@ -620,24 +620,28 @@ def play(b):
     p1score2 = 0
     p1score3 = 0
     p1score4 = 0
+    ## if b == 21 create the computer players scores
     if b == 21:
         p2 = "Computer"
         p2score1 = 0
         p2score2 = 0
         p2score3 = 0
         p2score4 = 0
+    ## if 5 > b > 1 create the second players scores
     if 5 > b > 1:
         p2 = "Player 2"
         p2score1 = 0
         p2score2 = 0
         p2score3 = 0
         p2score4 = 0
+    ## if 5 > b > 2 create the third players scores
     if 5 > b > 2:
         p3 = "Player 3"
         p3score1 = 0
         p3score2 = 0
         p3score3 = 0
         p3score4 = 0
+    ## if 5 > b > 3 create the fourth players scores
     if 5 > b > 3:
         p4 = "Player 4"
         p4score1 = 0
@@ -646,6 +650,7 @@ def play(b):
         p4score4 = 0
     t = 1
     play = True
+    # while loop to run the game set the board
     while True:
         l = False
         s = False
@@ -654,212 +659,286 @@ def play(b):
         GD.blit(board, (w / 2 - 250, h / 2 - 250))
         mouse = pygame.mouse.get_pos()
 
+        # for loop for events
         for event in pygame.event.get():
-
+            # if statement to quit
             if event.type == pygame.QUIT:
                 Quit()
+            # if statement to quit with esc
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     Quit()
-
+        # checks if b == 21 to use 1 player and computer
         if b == 21:
             # (player,score,text,xmouse,ymouse,x,y,w,h,i,a,fs)
 
+            # if to see if the button was pressed
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
+                # if to check the turn
                 if t == 1:
+                    # checks if p1score1 < 32
                     if p1score1 < 32:
                         p1score1, six = turn_goti1(p1score1)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr, ycr = goti_red1(p1score1)
+                    # checks elif p1score2 < 31
                     elif p1score2 < 31:
                         p1score2, six = turn_goti2(p1score2)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr1, ycr1 = goti_red2(p1score2)
+                    # checks elif p1score3 < 30
                     elif p1score3 < 30:
                         p1score3, six = turn_goti3(p1score3)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr2, ycr2 = goti_red3(p1score3)
                     else:
                         p1score4, six = turn_goti4(p1score4)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr3, ycr3 = goti_red4(p1score4)
+                        # If p1score4 == 29 it will end the game and play the win sound
                         if p1score4 == 29:
                             pygame.mixer.Sound.play(win)
                             pygame.display.update()
 
 
 
-
+            # checks if true because it is the computer player
             button1("Computer", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30)
             if True:
+                # checks turn
                 if t == 2:
+                    # checks if p2score1 < 32
                     if p2score1 < 32:
                         p2score1, six = turn_goti1(p2score1)
                         xcy, ycy = goti_yellow1(p2score1)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
+                    # checks elif p2score2 < 31
                     elif p2score2 < 31:
                         p2score2, six = turn_goti2(p2score2)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
                         xcy1, ycy1 = goti_yellow2(p2score2)
+                    # checks elif p2score3 < 30
                     elif p2score3 < 30:
                         p2score3, six = turn_goti3(p2score3)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
                         xcy2, ycy2 = goti_yellow3(p2score3)
                     else:
                         p2score4, six = turn_goti4(p2score4)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
                         xcy3, ycy3 = goti_yellow4(p2score4)
+                        # If p2score4 == 29 it will end the game and play the win sound
                         if p2score4 == 29:
                             pygame.mixer.Sound.play(win)
                             pygame.display.update()
 
-
-
+        # checks if 5 > b > 1 to use a first player and a second player
         if 5 > b > 1:
+            # checks if button is true
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
+                # checks turn
                 if t == 1:
+                    # checks if p1score1 < 32
                     if p1score1 < 32:
                         p1score1, six = turn_goti1(p1score1)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr, ycr = goti_red1(p1score1)
+                    # checks elif p1score2 < 31
                     elif p1score2 < 31:
                         p1score2, six = turn_goti2(p1score2)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr1, ycr1 = goti_red2(p1score2)
+                    # checks elif p1score3 < 30
                     elif p1score3 < 30:
                         p1score3, six = turn_goti3(p1score3)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr2, ycr2 = goti_red3(p1score3)
                     else:
                         p1score4, six = turn_goti4(p1score4)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
                         xcr3, ycr3 = goti_red4(p1score4)
+                        # If p1score4 == 29 it will end the game and play the win sound
                         if p1score4 == 29:
                             pygame.mixer.Sound.play(win)
                             pygame.display.update()
 
-
+            # checks if button is true
             if button1("Player 2", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30):
+                # checks turn
                 if t == 2:
+                    # checks if p2score1 < 32
                     if p2score1 < 32:
                         p2score1, six = turn_goti1(p2score1)
                         xcy, ycy = goti_yellow1(p2score1)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
+                    # checks elif p2score2 < 31
                     elif p2score2 < 31:
                         p2score2, six = turn_goti2(p2score2)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
                         xcy1, ycy1 = goti_yellow2(p2score2)
+                    # checks elif p2score3 < 30
                     elif p2score3 < 30:
                         p2score3, six = turn_goti3(p2score3)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
                         xcy2, ycy2 = goti_yellow3(p2score3)
                     else:
                         p2score4, six = turn_goti4(p2score4)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 3 or b == 21 and the sets turn back to 1
                             if b < 3 or b == 21:
                                 t = 1
                         xcy3, ycy3 = goti_yellow4(p2score4)
+                        # If p2score4 == 29 it will end the game and play the win sound
                         if p2score4 == 29:
                             pygame.mixer.Sound.play(win)
                             pygame.display.update()
-
+        # checks if 5 > b > 2 to use a first player, a second player, and a third player
         if 5 > b > 2:
+            # checks if button is true
             if button1("Player 3", mouse[0], mouse[1], 700, 700, 200, 50, green, grey, 30):
+                # checks turn
                 if t == 3:
+                    # checks if p2score1 < 32
                     if p3score1 < 32:
                         p3score1, six = turn_goti1(p3score1)
                         xcg, ycg = goti_green1(p3score1)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 4 and the sets turn back to 1
                             if b < 4:
                                 t = 1
+                    # checks elif p2score2 < 31
                     elif p3score2 < 31:
                         p3score2, six = turn_goti2(p3score2)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 4 and the sets turn back to 1
                             if b < 4:
                                 t = 1
                         xcg1, ycg1 = goti_green2(p3score2)
+                    # checks elif p2score3 < 30
                     elif p3score3 < 30:
                         p3score3, six = turn_goti3(p3score3)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 4 and the sets turn back to 1
                             if b < 4:
                                 t = 1
                         xcg2, ycg2 = goti_green3(p3score3)
                     else:
                         p3score4, six = turn_goti4(p3score4)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 4 and the sets turn back to 1
                             if b < 4:
                                 t = 1
                         xcg3, ycg3 = goti_green4(p3score4)
+                        # If p3score4 == 29 it will end the game and play the win sound
                         if p3score4 == 29:
                             pygame.mixer.Sound.play(win)
                             pygame.display.update()
-
+        # checks if 5 > b > 3 to use a first player, a second player, a third player, and a fourth player
         if 5 > b > 3:
+            #checks if button is true
             if button1("Player 4", mouse[0], mouse[1], 1000, 700, 200, 50, blue, grey, 30):
+                # checks turn
                 if t == 4:
+                    # checks if p4score1 < 32
                     if p4score1 < 32:
                         p4score1, six = turn_goti1(p4score1)
                         xcb, ycb = goti_blue1(p4score1)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 5 and the sets turn back to 1
                             if b < 5:
                                 t = 1
-
+                    # checks elif p4score2 < 31
                     elif p4score2 < 31:
                         p4score2, six = turn_goti2(p4score2)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 5 and the sets turn back to 1
                             if b < 5:
                                 t = 1
                         xcb1, ycb1 = goti_blue2(p4score2)
+                    # checks elif p4score3 < 30
                     elif p4score3 < 30:
                         p4score3, six = turn_goti3(p4score3)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 5 and the sets turn back to 1
                             if b < 5:
                                 t = 1
                         xcb2, ycb2 = goti_blue3(p4score3)
                     else:
                         p4score4, six = turn_goti4(p4score4)
+                        # checks if a six was rolled or not
                         if not six:
                             t += 1
+                            # checks if b < 5 and the sets turn back to 1
                             if b < 5:
                                 t = 1
                         xcb3, ycb3 = goti_blue4(p4score4)
+                        # If p4score4 == 29 it will end the game and play the win sound
                         if p4score4 == 29:
                             pygame.mixer.Sound.play(win)
                             pygame.display.update()
@@ -869,18 +948,20 @@ def play(b):
         GD.blit(redgoti, (xcr1, ycr1))
         GD.blit(redgoti, (xcr2, ycr2))
         GD.blit(redgoti, (xcr3, ycr3))
+        # If 5 > b > 1 it will spawn the second players/computer pieces
         if 5 > b > 1 or b == 21:
             GD.blit(yellowgoti, (xcy, ycy))
             GD.blit(yellowgoti, (xcy1, ycy1))
             GD.blit(yellowgoti, (xcy2, ycy2))
             GD.blit(yellowgoti, (xcy3, ycy3))
 
+        #If 5 > b > 2 it will spawn the third players pieces
         if 5 > b > 2:
             GD.blit(greengoti, (xcg, ycg))
             GD.blit(greengoti, (xcg1, ycg1))
             GD.blit(greengoti, (xcg2, ycg2))
             GD.blit(greengoti, (xcg3, ycg3))
-
+        # If 5 > b > 2 it will spawn the fourth players pieces
         if 5 > b > 3:
             GD.blit(bluegoti, (xcb, ycb))
             GD.blit(bluegoti, (xcb1, ycb1))
