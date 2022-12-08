@@ -11,7 +11,7 @@ h = 768
 GD = pygame.display.set_mode((w, h), pygame.FULLSCREEN)
 pygame.display.set_caption("Trouble")
 pygame.display.update()
-#test
+# test
 # Graphics:
 black = (10, 10, 10)
 white = (250, 250, 250)
@@ -25,7 +25,7 @@ yellow = (150, 150, 0)
 purple = (43, 3, 132)
 b_purple = (60, 0, 190)
 
-board = pygame.image.load("Snakes-and-Ladders-Bigger.jpg")
+board = pygame.image.load("Trouble-Bigger.jpg")
 die1 = pygame.image.load("Die1.png")
 die2 = pygame.image.load("Die2.png")
 die3 = pygame.image.load("Die3.png")
@@ -320,7 +320,7 @@ def turn_goti1(score):
         six = True
     else:
         six = False
-    p = dice(a)
+    dice(a)
     if score + a < 33:
         if score == 0:
             if a == 6:
@@ -336,7 +336,7 @@ def turn_goti2(score):
         six = True
     else:
         six = False
-    p = dice(a)
+    dice(a)
     if score + a < 32:
         if score == 0:
             if a == 6:
@@ -352,7 +352,7 @@ def turn_goti3(score):
         six = True
     else:
         six = False
-    p = dice(a)
+    dice(a)
     if score + a < 31:
         if score == 0:
             if a == 6:
@@ -368,7 +368,7 @@ def turn_goti4(score):
         six = True
     else:
         six = False
-    p = dice(a)
+    dice(a)
     if score + a < 30:
         if score == 0:
             if a == 6:
@@ -526,7 +526,8 @@ def options():
 
         pygame.display.update()
 
-#play function
+
+# play function
 def play(b):
     b6 = -1
     time = 3000
@@ -670,12 +671,11 @@ def play(b):
                             t += 1
                         xcr3, ycr3 = goti_red4(p1score4)
                         if p1score4 == 29:
-                            time = pygame.time.get_ticks()
-                            while pygame.time.get_ticks() - time < 2000:
-                                message_display1("Player 1 Wins", 650, 50, 50, black)
-                                pygame.mixer.Sound.play(win)
-                                pygame.display.update()
-                            break
+                            pygame.mixer.Sound.play(win)
+                            pygame.display.update()
+
+
+
 
             button1("Computer", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30)
             if True:
@@ -709,12 +709,10 @@ def play(b):
                                 t = 1
                         xcy3, ycy3 = goti_yellow4(p2score4)
                         if p2score4 == 29:
-                            time = pygame.time.get_ticks()
-                            while pygame.time.get_ticks() - time < 2000:
-                                message_display1("Computer Wins", 650, 50, 50, black)
-                                pygame.mixer.Sound.play(win)
-                                pygame.display.update()
-                            break
+                            pygame.mixer.Sound.play(win)
+                            pygame.display.update()
+
+
 
         if 5 > b > 1:
             if button1("Player 1", mouse[0], mouse[1], 100, 700, 200, 50, red, grey, 30):
@@ -740,12 +738,9 @@ def play(b):
                             t += 1
                         xcr3, ycr3 = goti_red4(p1score4)
                         if p1score4 == 29:
-                            time = pygame.time.get_ticks()
-                            while pygame.time.get_ticks() - time < 2000:
-                                message_display1("Player 1 Wins", 650, 50, 50, black)
-                                pygame.mixer.Sound.play(win)
-                                pygame.display.update()
-                            break
+                            pygame.mixer.Sound.play(win)
+                            pygame.display.update()
+
 
             if button1("Player 2", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30):
                 if t == 2:
@@ -778,12 +773,8 @@ def play(b):
                                 t = 1
                         xcy3, ycy3 = goti_yellow4(p2score4)
                         if p2score4 == 29:
-                            time = pygame.time.get_ticks()
-                            while pygame.time.get_ticks() - time < 2000:
-                                message_display1("Player 2 Wins", 650, 50, 50, black)
-                                pygame.mixer.Sound.play(win)
-                                pygame.display.update()
-                            break
+                            pygame.mixer.Sound.play(win)
+                            pygame.display.update()
 
         if 5 > b > 2:
             if button1("Player 3", mouse[0], mouse[1], 700, 700, 200, 50, green, grey, 30):
@@ -817,12 +808,8 @@ def play(b):
                                 t = 1
                         xcg3, ycg3 = goti_green4(p3score4)
                         if p3score4 == 29:
-                            time = pygame.time.get_ticks()
-                            while pygame.time.get_ticks() - time < 2000:
-                                message_display1("Player 3 Wins", 650, 50, 50, black)
-                                pygame.mixer.Sound.play(win)
-                                pygame.display.update()
-                            break
+                            pygame.mixer.Sound.play(win)
+                            pygame.display.update()
 
         if 5 > b > 3:
             if button1("Player 4", mouse[0], mouse[1], 1000, 700, 200, 50, blue, grey, 30):
@@ -857,12 +844,8 @@ def play(b):
                                 t = 1
                         xcb3, ycb3 = goti_blue4(p4score4)
                         if p4score4 == 29:
-                            time = pygame.time.get_ticks()
-                            while pygame.time.get_ticks() - time < 2000:
-                                message_display1("Player 4 Wins", 650, 50, 50, black)
-                                pygame.mixer.Sound.play(win)
-                                pygame.display.update()
-                            break
+                            pygame.mixer.Sound.play(win)
+                            pygame.display.update()
 
         b6 = button("Back", mouse[0], mouse[1], 0, 0, 200, 50, red, b_red, 30, 7)
         GD.blit(redgoti, (xcr, ycr))
