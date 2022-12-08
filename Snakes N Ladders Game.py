@@ -4,15 +4,17 @@ import time
 
 clock = pygame.time.Clock()
 
+# Sets up the screen
 pygame.init()
 w = 1366
 h = 768
-
 GD = pygame.display.set_mode((w, h), pygame.FULLSCREEN)
+
+# Sets up the title
 pygame.display.set_caption("Trouble")
 pygame.display.update()
-# test
-# Graphics:
+
+# Colors
 black = (10, 10, 10)
 white = (250, 250, 250)
 red = (200, 0, 0)
@@ -25,7 +27,10 @@ yellow = (150, 150, 0)
 purple = (43, 3, 132)
 b_purple = (60, 0, 190)
 
+# Gameboard image
 board = pygame.image.load("Trouble-Bigger.jpg")
+
+# Dice images
 die1 = pygame.image.load("Die1.png")
 die2 = pygame.image.load("Die2.png")
 die3 = pygame.image.load("Die3.png")
@@ -33,11 +38,14 @@ die4 = pygame.image.load("Die4.png")
 die5 = pygame.image.load("Die5.png")
 die6 = pygame.image.load("Die6.png")
 
+# Game piece images
 redgoti = pygame.image.load("redgoti.png")
 yellowgoti = pygame.image.load("yellowgoti.png")
 greengoti = pygame.image.load("greengoti.png")
 bluegoti = pygame.image.load("bluegoti.png")
 menubg = pygame.image.load("menu.jpg")
+
+# Loading screen/main menu/background
 p = pygame.image.load("playbg.jpg")
 intbg = pygame.image.load("intropic.png")
 intbg2 = pygame.image.load("intropic2.jpg")
@@ -45,11 +53,12 @@ intbg3 = pygame.image.load("intropic3.jpg")
 intbg4 = pygame.image.load("intropic4.jpg")
 intbg5 = pygame.image.load("intropic5.jpg")
 
+# Music
 pygame.mixer.music.load("music.wav")
 win = pygame.mixer.Sound("win.wav")
 lose = pygame.mixer.Sound("lose.wav")
 
-# mouse pos
+# Mouse positioning
 mouse = pygame.mouse.get_pos()
 click = pygame.mouse.get_pressed()
 
@@ -80,7 +89,7 @@ def text_objects1(text, font, c):
     return textSurface, textSurface.get_rect()
 
 
-# Goti movement function
+# Coordinate track for the first red piece determining where the piece is moved to
 def goti_red1(a):
     l1 = [[814, 594], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
           [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152],
@@ -91,7 +100,7 @@ def goti_red1(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the second red piece determining where the piece is moved to
 def goti_red2(a):
     l1 = [[846, 573], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
           [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152],
@@ -102,7 +111,7 @@ def goti_red2(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the third red piece determining where the piece is moved to
 def goti_red3(a):
     l1 = [[871, 547], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
           [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152],
@@ -113,7 +122,7 @@ def goti_red3(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the fourth red piece determining where the piece is moved to
 def goti_red4(a):
     l1 = [[891, 513], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
           [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185], [568, 161], [617, 152],
@@ -124,7 +133,7 @@ def goti_red4(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the first yellow piece determining where the piece is moved to
 def goti_yellow1(a):
     l1 = [[524, 147], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225],
           [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589],
@@ -135,7 +144,7 @@ def goti_yellow1(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the second yellow piece determining where the piece is moved to
 def goti_yellow2(a):
     l1 = [[491, 167], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225],
           [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589],
@@ -146,7 +155,7 @@ def goti_yellow2(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the third yellow piece determining where the piece is moved to
 def goti_yellow3(a):
     l1 = [[464, 194], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225],
           [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589],
@@ -157,7 +166,7 @@ def goti_yellow3(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the fourth yellow piece determining where the piece is moved to
 def goti_yellow4(a):
     l1 = [[446, 226], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225],
           [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554], [769, 580], [720, 589],
@@ -168,7 +177,7 @@ def goti_yellow4(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the first green piece determining where the piece is moved to
 def goti_green1(a):
     l1 = [[445, 514], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
@@ -179,7 +188,7 @@ def goti_green1(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the second green piece determining where the piece is moved to
 def goti_green2(a):
     l1 = [[465, 514], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
@@ -190,7 +199,7 @@ def goti_green2(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the third green piece determining where the piece is moved to
 def goti_green3(a):
     l1 = [[491, 577], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
@@ -201,7 +210,7 @@ def goti_green3(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the fourth green piece determining where the piece is moved to
 def goti_green4(a):
     l1 = [[523, 594], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
           [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225], [877, 270], [887, 318],
@@ -212,7 +221,7 @@ def goti_green4(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the first blue piece determining where the piece is moved to
 def goti_blue1(a):
     l1 = [[892, 226], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
@@ -223,7 +232,7 @@ def goti_blue1(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the second blue piece determining where the piece is moved to
 def goti_blue2(a):
     l1 = [[871, 193], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
@@ -234,7 +243,7 @@ def goti_blue2(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the third blue piece determining where the piece is moved to
 def goti_blue3(a):
     l1 = [[845, 166], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
@@ -245,7 +254,7 @@ def goti_blue3(a):
     y = l2[1]
     return x, y
 
-
+# Coordinate track for the fourth blue piece determining where the piece is moved to
 def goti_blue4(a):
     l1 = [[812, 147], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
           [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515], [458, 470], [451, 422],
@@ -261,7 +270,7 @@ def text_objects1(text, font):
     textSurface = font.render(text, True, black)
     return textSurface, textSurface.get_rect()
 
-
+# displays the corresponding die png on the board based on which integer 1-6 was given
 def dice(a):
     if a == 1:
         a = die1
@@ -275,15 +284,15 @@ def dice(a):
         a = die5
     elif a == 6:
         a = die6
-
-    time = pygame.time.get_ticks()
-    while pygame.time.get_ticks() - time < 1000:
+    time1 = pygame.time.get_ticks()
+    # determines the amount of time the die is displayed for
+    while pygame.time.get_ticks() - time1 < 1000:
         GD.blit(a, (410, 90))
         pygame.display.update()
 
-    # for mute and unmute
 
 
+#mute/unmute
 def button2(text, xmouse, ymouse, x, y, w, h, i, a, fs):
     # mouse pos
     mouse = pygame.mouse.get_pos()
