@@ -322,67 +322,75 @@ def button1(text, xmouse, ymouse, x, y, w, h, i, a, fs):
     message_display(text, (x + w + x) / 2, (y + h + y) / 2, fs)
 
 
-# Turn
+# Turn function for the first piece of each color
+# returns the score which determines where in the 2D array of coordinates the piece will be at
+# returns whether a not the player rolled a six --> if so the player gets another turn
 def turn_goti1(score):
     a = randint(1, 6)  # player dice roll
-    if a == 6:
+    if a == 6:  # checks if player rolled a six
         six = True
     else:
         six = False
-    dice(a)
-    if score + a < 33:
-        if score == 0:
-            if a == 6:
+    dice(a)  # displays the die on the board
+    if score + a < 33:  # ensures the score does not cause an out of bound error
+        if score == 0:  # checks if the piece is still in the home
+            if a == 6:  # if the piece is in the home, the player needs to roll a six to get out
                 score += 1
-        else:
+        else:  # once the player is along the board, they move the number of spaces they rolled
             score += a
     return score, six
 
-
+# Turn function for the second piece of each color
+# returns the score which determines where in the 2D array of coordinates the piece will be at
+# returns whether a not the player rolled a six --> if so the player gets another turn
 def turn_goti2(score):
     a = randint(1, 6)  # player dice roll
-    if a == 6:
+    if a == 6:  # checks if player rolled a six
         six = True
     else:
         six = False
-    dice(a)
-    if score + a < 32:
-        if score == 0:
-            if a == 6:
+    dice(a)  # displays the die on the board
+    if score + a < 32:  # ensures the score does not cause an out of bound error
+        if score == 0:  # checks if the piece is still in the home
+            if a == 6:  # if the piece is in the home, the player needs to roll a six to get out
                 score += 1
-        else:
+        else:  # once the player is along the board, they move the number of spaces they rolled
             score += a
     return score, six
 
-
+# Turn function for the third piece of each color
+# returns the score which determines where in the 2D array of coordinates the piece will be at
+# returns whether a not the player rolled a six --> if so the player gets another turn
 def turn_goti3(score):
     a = randint(1, 6)  # player dice roll
-    if a == 6:
+    if a == 6:  # checks if player rolled a six
         six = True
     else:
         six = False
-    dice(a)
-    if score + a < 31:
-        if score == 0:
-            if a == 6:
+    dice(a)  # displays the die on the board
+    if score + a < 31:  # ensures the score does not cause an out of bound error
+        if score == 0:  # checks if the piece is still in the home
+            if a == 6:  # if the piece is in the home, the player needs to roll a six to get out
                 score += 1
-        else:
+        else:  # once the player is along the board, they move the number of spaces they rolled
             score += a
     return score, six
 
-
+# Turn function for the fourth piece of each color
+# returns the score which determines where in the 2D array of coordinates the piece will be at
+# returns whether a not the player rolled a six --> if so the player gets another turn
 def turn_goti4(score):
     a = randint(1, 6)  # player dice roll
-    if a == 6:
+    if a == 6:  # checks if player rolled a six
         six = True
     else:
         six = False
-    dice(a)
-    if score + a < 30:
-        if score == 0:
-            if a == 6:
+    dice(a)  # displays the die on the board
+    if score + a < 30:  # ensures the score does not cause an out of bound error
+        if score == 0:  # checks if the piece is still in the home
+            if a == 6:  # if the piece is in the home, the player needs to roll a six to get out
                 score += 1
-        else:
+        else:  # once the player is along the board, they move the number of spaces they rolled
             score += a
     return score, six
 
