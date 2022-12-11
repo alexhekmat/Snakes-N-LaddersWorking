@@ -47,11 +47,10 @@ menubg = pygame.image.load("menu.jpg")
 
 # Loading screen/main menu/background
 p = pygame.image.load("playbg.jpg")
-intbg = pygame.image.load("intropic.png")
+intbg1 = pygame.image.load("intropic1.jpg")
 intbg2 = pygame.image.load("intropic2.jpg")
 intbg3 = pygame.image.load("intropic3.jpg")
 intbg4 = pygame.image.load("intropic4.jpg")
-intbg5 = pygame.image.load("intropic5.jpg")
 
 # Music
 pygame.mixer.music.load("music.wav")
@@ -71,6 +70,7 @@ def message_display(text, x, y, fs):
     GD.blit(TextSurf, TextRect)
 
 
+# renders the font in white into the surface object
 def text_objects(text, font):
     textSurface = font.render(text, True, white)
     return textSurface, textSurface.get_rect()
@@ -84,6 +84,7 @@ def message_display1(text, x, y, fs, c):
     GD.blit(TextSurf, TextRect)
 
 
+# renders the font in a color other than black/white into the surface object
 def text_objects1(text, font, c):
     textSurface = font.render(text, True, c)
     return textSurface, textSurface.get_rect()
@@ -100,6 +101,7 @@ def goti_red1(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the second red piece determining where the piece is moved to
 def goti_red2(a):
     l1 = [[846, 573], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
@@ -110,6 +112,7 @@ def goti_red2(a):
     x = l2[0]
     y = l2[1]
     return x, y
+
 
 # Coordinate track for the third red piece determining where the piece is moved to
 def goti_red3(a):
@@ -122,6 +125,7 @@ def goti_red3(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the fourth red piece determining where the piece is moved to
 def goti_red4(a):
     l1 = [[891, 513], [812, 554], [769, 580], [720, 589], [669, 589], [617, 589], [569, 580], [525, 557], [484, 515],
@@ -132,6 +136,7 @@ def goti_red4(a):
     x = l2[0]
     y = l2[1]
     return x, y
+
 
 # Coordinate track for the first yellow piece determining where the piece is moved to
 def goti_yellow1(a):
@@ -144,6 +149,7 @@ def goti_yellow1(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the second yellow piece determining where the piece is moved to
 def goti_yellow2(a):
     l1 = [[491, 167], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225],
@@ -154,6 +160,7 @@ def goti_yellow2(a):
     x = l2[0]
     y = l2[1]
     return x, y
+
 
 # Coordinate track for the third yellow piece determining where the piece is moved to
 def goti_yellow3(a):
@@ -166,6 +173,7 @@ def goti_yellow3(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the fourth yellow piece determining where the piece is moved to
 def goti_yellow4(a):
     l1 = [[446, 226], [524, 185], [568, 161], [617, 152], [669, 152], [720, 152], [769, 160], [812, 186], [853, 225],
@@ -176,6 +184,7 @@ def goti_yellow4(a):
     x = l2[0]
     y = l2[1]
     return x, y
+
 
 # Coordinate track for the first green piece determining where the piece is moved to
 def goti_green1(a):
@@ -188,6 +197,7 @@ def goti_green1(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the second green piece determining where the piece is moved to
 def goti_green2(a):
     l1 = [[465, 514], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
@@ -198,6 +208,7 @@ def goti_green2(a):
     x = l2[0]
     y = l2[1]
     return x, y
+
 
 # Coordinate track for the third green piece determining where the piece is moved to
 def goti_green3(a):
@@ -210,6 +221,7 @@ def goti_green3(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the fourth green piece determining where the piece is moved to
 def goti_green4(a):
     l1 = [[523, 594], [484, 515], [458, 470], [451, 422], [452, 371], [449, 320], [460, 270], [485, 227], [524, 185],
@@ -220,6 +232,7 @@ def goti_green4(a):
     x = l2[0]
     y = l2[1]
     return x, y
+
 
 # Coordinate track for the first blue piece determining where the piece is moved to
 def goti_blue1(a):
@@ -232,6 +245,7 @@ def goti_blue1(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the second blue piece determining where the piece is moved to
 def goti_blue2(a):
     l1 = [[871, 193], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
@@ -243,6 +257,7 @@ def goti_blue2(a):
     y = l2[1]
     return x, y
 
+
 # Coordinate track for the third blue piece determining where the piece is moved to
 def goti_blue3(a):
     l1 = [[845, 166], [853, 225], [877, 270], [887, 318], [887, 370], [887, 421], [877, 468], [853, 514], [812, 554],
@@ -253,6 +268,7 @@ def goti_blue3(a):
     x = l2[0]
     y = l2[1]
     return x, y
+
 
 # Coordinate track for the fourth blue piece determining where the piece is moved to
 def goti_blue4(a):
@@ -266,13 +282,15 @@ def goti_blue4(a):
     return x, y
 
 
+# renders the font in black into the surface object
 def text_objects1(text, font):
     textSurface = font.render(text, True, black)
     return textSurface, textSurface.get_rect()
 
+
 # displays the corresponding die png on the board based on which integer 1-6 was given
 def dice(a):
-    if a == 1:
+    if a == 1:  # whichever integer 1-6 was given in the a parameter determines which die is shown in the board
         a = die1
     elif a == 2:
         a = die2
@@ -285,38 +303,38 @@ def dice(a):
     elif a == 6:
         a = die6
     time1 = pygame.time.get_ticks()
-    # determines the amount of time the die is displayed for
-    while pygame.time.get_ticks() - time1 < 1000:
+    while pygame.time.get_ticks() - time1 < 1000:  # determines the amount of time the die is displayed for
         GD.blit(a, (410, 90))
         pygame.display.update()
 
 
-
-#mute/unmute
+# buttons for muting/unmunting the game
 def button2(text, xmouse, ymouse, x, y, w, h, i, a, fs):
     # mouse pos
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
     if x + w > xmouse > x and y + h > ymouse > y:
+        # ensures the mouse is within the parameters of the button
         pygame.draw.rect(GD, a, [x - 2.5, y - 2.5, w + 5, h + 5])
+        # ensures that the mouse was clicked
         if pygame.mouse.get_pressed() == (1, 0, 0):
             return True
-
     else:
         pygame.draw.rect(GD, i, [x, y, w, h])
     message_display(text, (x + w + x) / 2, (y + h + y) / 2, fs)
 
 
-# Buttons for playing:
+# Buttons for a player to start their turn:
 def button1(text, xmouse, ymouse, x, y, w, h, i, a, fs):
     # mouse pos
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
     if x + w > xmouse > x and y + h > ymouse > y:
+        # ensures the mouse is within the parameters of the button
         pygame.draw.rect(GD, a, [x - 2.5, y - 2.5, w + 5, h + 5])
         if pygame.mouse.get_pressed() == (1, 0, 0):
+            # ensures that the mouse was clicked
             return True
-
     else:
         pygame.draw.rect(GD, i, [x, y, w, h])
     message_display(text, (x + w + x) / 2, (y + h + y) / 2, fs)
@@ -340,6 +358,7 @@ def turn_goti1(score):
             score += a
     return score, six
 
+
 # Turn function for the second piece of each color
 # returns the score which determines where in the 2D array of coordinates the piece will be at
 # returns whether a not the player rolled a six --> if so the player gets another turn
@@ -358,6 +377,7 @@ def turn_goti2(score):
             score += a
     return score, six
 
+
 # Turn function for the third piece of each color
 # returns the score which determines where in the 2D array of coordinates the piece will be at
 # returns whether a not the player rolled a six --> if so the player gets another turn
@@ -375,6 +395,7 @@ def turn_goti3(score):
         else:  # once the player is along the board, they move the number of spaces they rolled
             score += a
     return score, six
+
 
 # Turn function for the fourth piece of each color
 # returns the score which determines where in the 2D array of coordinates the piece will be at
@@ -401,29 +422,26 @@ def Quit():
     quit()
 
 
-# Buttons:
+# Buttons for choosing the number of players
 def button(text, xmouse, ymouse, x, y, w, h, i, a, fs, b):
     if x + w > xmouse > x and y + h > ymouse > y:
+        # ensures that the mouse was within the parameters of the button
         pygame.draw.rect(GD, a, [x - 2.5, y - 2.5, w + 5, h + 5])
         if pygame.mouse.get_pressed() == (1, 0, 0):
-            if b == 1:
+            # ensures that the mouse was clicked
+            if b == 1:  # Options button was pressed
                 options()
-            elif b == 5:
+            elif b == 5:  # Back button was pressed
                 return 5
-            elif b == 0:
+            elif b == 0: # Quit button was pressed
                 Quit()
             elif b == "s" or b == 2 or b == 3 or b == 4:
+                # 1 player, 2 players, 3 players, or 4 players button was pressed
                 return b
             elif b == 7:
-                options()
+                options()  # Options button was pressed
             else:
                 return True
-
-
-
-
-
-
     else:
         pygame.draw.rect(GD, i, [x, y, w, h])
     message_display(text, (x + w + x) / 2, (y + h + y) / 2, fs)
@@ -445,28 +463,27 @@ def button(text, xmouse, ymouse, x, y, w, h, i, a, fs, b):
 # pygame.display.update()
 
 def intro():
-    time = pygame.time.get_ticks()
-    while pygame.time.get_ticks() - time < 2500:
-        GD.blit(intbg, (0, 0))
-        pygame.display.update()
-    while True:
-        time = pygame.time.get_ticks()
-        while pygame.time.get_ticks() - time < 500:
+    while True:  # rotates through the intro screens until a key is pressed
+        time1 = pygame.time.get_ticks()
+        while pygame.time.get_ticks() - time1 < 500:
+            # briefly displays intro screen 1 (intropic1.png)
+            GD.blit(intbg1, (0, 0))
+            pygame.display.update()
+        time1 = pygame.time.get_ticks()
+        while pygame.time.get_ticks() - time1 < 500:
+            # briefly displays intro screen 2 (intropic2.png)
             GD.blit(intbg2, (0, 0))
             pygame.display.update()
-        time = pygame.time.get_ticks()
-        while pygame.time.get_ticks() - time < 500:
+        time1 = pygame.time.get_ticks()
+        while pygame.time.get_ticks() - time1 < 500:
+            # briefly displays intro screen 3 (intropic3.png)
             GD.blit(intbg3, (0, 0))
             pygame.display.update()
-        time = pygame.time.get_ticks()
-        while pygame.time.get_ticks() - time < 500:
+        time1 = pygame.time.get_ticks()
+        while pygame.time.get_ticks() - time1 < 500:
+            # briefly displays intro screen 4 (intropic4.png)
             GD.blit(intbg4, (0, 0))
             pygame.display.update()
-        time = pygame.time.get_ticks()
-        while pygame.time.get_ticks() - time < 500:
-            GD.blit(intbg5, (0, 0))
-            pygame.display.update()
-
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
                 return
@@ -476,13 +493,12 @@ def intro():
 # Main Menu
 def main():
     pygame.mixer.music.play(-1)
-
     menu = True
-    while menu:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+    while menu:  # while the user is in the menu screen
+        for event in pygame.event.get():  # for any event performed by the user
+            if event.type == pygame.QUIT:  # quit if the Quit button is selected
                 Quit()
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN:  # quit if the escape key is pressed
                 if event.key == pygame.K_ESCAPE:
                     Quit()
 
@@ -497,8 +513,10 @@ def main():
 
         mouse = pygame.mouse.get_pos()
         if button2("Mute Music", mouse[0], mouse[1], 1166, 0, 200, 50, purple, b_purple, 25):
+            # mute the music if the mute music button is selected
             pygame.mixer.music.pause()
         if button2("Play Music", mouse[0], mouse[1], 1166, 75, 200, 50, purple, b_purple, 25):
+            #play music if the play music button is selected
             pygame.mixer.music.unpause()
 
         pygame.display.update()
@@ -508,16 +526,16 @@ def main():
 def options():
     flag = True
     while flag == True:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+        for event in pygame.event.get():  # for any event performed by the user
+            if event.type == pygame.QUIT:  # quit if they select the quit button
                 Quit()
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN:  # quit if they press the escape key
                 if event.key == pygame.K_ESCAPE:
                     Quit()
 
         # mouse pos
-        mouse = pygame.mouse.get_pos()
-        click = pygame.mouse.get_pressed()
+        pygame.mouse.get_pos()
+        pygame.mouse.get_pressed()
         b1 = b2 = b3 = b4 = b5 = -1
         GD.blit(menubg, (0, 0))
         # Single player button
@@ -530,17 +548,16 @@ def options():
         b4 = button("4 Players", mouse[0], mouse[1], (w / 2) - 150, 550, 300, 50, green, b_green, 30, 4)
         # Back button
         b5 = button("Back", mouse[0], mouse[1], 0, 650, 200, 50, red, b_red, 30, 5)
-        if b5 == 5:
+        if b5 == 5:  # returns to the main menu
             main()
-        if b1 == "s":
+        if b1 == "s":  # 1 player game against the computer
             play(21)
-        if b2 == 2:
+        if b2 == 2:  # 2 player game
             play(2)
-        if b3 == 3:
+        if b3 == 3:  # 3 player game
             play(3)
-        if b4 == 4:
+        if b4 == 4:  # 4 player game
             play(4)
-
         pygame.display.update()
 
 
@@ -601,16 +618,19 @@ def play(b):
     GD.blit(redgoti, (xcr2, ycr2))
     GD.blit(redgoti, (xcr3, ycr3))
     if 5 > b > 1 or b == 21:
+        # sets up the yellow pieces
         GD.blit(yellowgoti, (xcy, ycy))
         GD.blit(yellowgoti, (xcy1, ycy1))
         GD.blit(yellowgoti, (xcy2, ycy2))
         GD.blit(yellowgoti, (xcy3, ycy3))
     if 5 > b > 2 or b == 21:
+        # sets up the green pieces
         GD.blit(greengoti, (xcg, ycg))
         GD.blit(greengoti, (xcg1, ycg1))
         GD.blit(greengoti, (xcg2, ycg2))
         GD.blit(greengoti, (xcg3, ycg3))
     if 5 > b > 2:
+        # sets up the blue pieces
         GD.blit(bluegoti, (xcb, ycb))
         GD.blit(bluegoti, (xcb1, ycb1))
         GD.blit(bluegoti, (xcb2, ycb2))
@@ -707,8 +727,6 @@ def play(b):
                         if p1score4 == 29:
                             pygame.mixer.Sound.play(win)
                             pygame.display.update()
-
-
 
             # checks if true because it is the computer player
             button1("Computer", mouse[0], mouse[1], 400, 700, 200, 50, yellow, grey, 30)
@@ -895,7 +913,7 @@ def play(b):
                             pygame.display.update()
         # checks if 5 > b > 3 to use a first player, a second player, a third player, and a fourth player
         if 5 > b > 3:
-            #checks if button is true
+            # checks if button is true
             if button1("Player 4", mouse[0], mouse[1], 1000, 700, 200, 50, blue, grey, 30):
                 # checks turn
                 if t == 4:
@@ -955,13 +973,13 @@ def play(b):
             GD.blit(yellowgoti, (xcy2, ycy2))
             GD.blit(yellowgoti, (xcy3, ycy3))
 
-        #If 5 > b > 2 it will spawn the third players pieces
+        # If 5 > b > 2 it will spawn the third players pieces
         if 5 > b > 2:
             GD.blit(greengoti, (xcg, ycg))
             GD.blit(greengoti, (xcg1, ycg1))
             GD.blit(greengoti, (xcg2, ycg2))
             GD.blit(greengoti, (xcg3, ycg3))
-        # If 5 > b > 2 it will spawn the fourth players pieces
+        # If 5 > b > 3 it will spawn the fourth players pieces
         if 5 > b > 3:
             GD.blit(bluegoti, (xcb, ycb))
             GD.blit(bluegoti, (xcb1, ycb1))
